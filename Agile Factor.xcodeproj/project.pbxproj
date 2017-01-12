@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5344E4261FFD26E2157E6972 /* Pods_Agile_Factor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C12AB84127A2A67854B99C1 /* Pods_Agile_Factor.framework */; };
+		7E16BD291E23D673006CE0A3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */; };
+		7E16BD2D1E23D682006CE0A3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16BD2B1E23D682006CE0A3 /* SettingsViewController.swift */; };
+		7E16BD2E1E23D682006CE0A3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */; };
+		7E247FD21E23A9450007288C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD01E23A9450007288C /* HomeViewController.swift */; };
+		7E247FD31E23A9450007288C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD11E23A9450007288C /* HomeViewController.xib */; };
+		7E247FD61E23A95D0007288C /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD41E23A95D0007288C /* VoucherViewController.swift */; };
+		7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD51E23A95D0007288C /* VoucherViewController.xib */; };
+		7E247FDA1E23ACB90007288C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD81E23ACB90007288C /* TabBarViewController.swift */; };
+		7E247FDB1E23ACB90007288C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD91E23ACB90007288C /* TabBarViewController.xib */; };
+		7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */; };
+		7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A26811E23F68900FBA70E /* Extensions.swift */; };
+		7E9A6A5D1E25529C008BA477 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A5C1E25529C008BA477 /* API.swift */; };
+		7E9A6A5F1E263EB4008BA477 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A5E1E263EB4008BA477 /* Member.swift */; };
+		7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A621E27AC82008BA477 /* ProductCell.swift */; };
+		7E9A6A651E27AD55008BA477 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A641E27AD55008BA477 /* ViewHelper.swift */; };
+		7E9B13611E2503E500B54CC8 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B13601E2503E500B54CC8 /* ProductsViewController.swift */; };
 		7EA20E511E1FE7990029C581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA20E501E1FE7990029C581 /* AppDelegate.swift */; };
-		7EA20E531E1FE7990029C581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA20E521E1FE7990029C581 /* ViewController.swift */; };
-		7EA20E561E1FE7990029C581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA20E541E1FE7990029C581 /* Main.storyboard */; };
 		7EA20E581E1FE7990029C581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA20E571E1FE7990029C581 /* Assets.xcassets */; };
 		7EA20E5B1E1FE7990029C581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA20E591E1FE7990029C581 /* LaunchScreen.storyboard */; };
+		7EA20E641E2006750029C581 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA20E621E2006750029C581 /* LoginViewController.swift */; };
+		7EA20E651E2006750029C581 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA20E631E2006750029C581 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C12AB84127A2A67854B99C1 /* Pods_Agile_Factor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agile_Factor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		7E16BD2B1E23D682006CE0A3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		7E247FD01E23A9450007288C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7E247FD11E23A9450007288C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		7E247FD41E23A95D0007288C /* VoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
+		7E247FD51E23A95D0007288C /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
+		7E247FD81E23ACB90007288C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7E247FD91E23ACB90007288C /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		7E9A26811E23F68900FBA70E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7E9A6A5C1E25529C008BA477 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7E9A6A5E1E263EB4008BA477 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		7E9A6A621E27AC82008BA477 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		7E9A6A641E27AD55008BA477 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		7E9B13601E2503E500B54CC8 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		7EA20E4D1E1FE7990029C581 /* Agile Factor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agile Factor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA20E501E1FE7990029C581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EA20E521E1FE7990029C581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7EA20E551E1FE7990029C581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EA20E571E1FE7990029C581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA20E5A1E1FE7990029C581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA20E5C1E1FE7990029C581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EA20E621E2006750029C581 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7EA20E631E2006750029C581 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9C5CC0A35886FD5D1C0697E8 /* Pods-Agile Factor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agile Factor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Agile Factor/Pods-Agile Factor.release.xcconfig"; sourceTree = "<group>"; };
+		B5DE7021D6EEF30E5AB0EA89 /* Pods-Agile Factor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agile Factor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Agile Factor/Pods-Agile Factor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +65,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5344E4261FFD26E2157E6972 /* Pods_Agile_Factor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B89E9BF7C324188283A267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5DE7021D6EEF30E5AB0EA89 /* Pods-Agile Factor.debug.xcconfig */,
+				9C5CC0A35886FD5D1C0697E8 /* Pods-Agile Factor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E99F84D1E2544E200342F00 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7E9A6A5C1E25529C008BA477 /* API.swift */,
+				7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		7E9A26801E23F66400FBA70E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E9A26811E23F68900FBA70E /* Extensions.swift */,
+				7E9A6A641E27AD55008BA477 /* ViewHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7E9A6A601E263EB8008BA477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E9A6A5E1E263EB4008BA477 /* Member.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7E9A6A611E27AC44008BA477 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E9A6A621E27AC82008BA477 /* ProductCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7EA20E441E1FE7990029C581 = {
 			isa = PBXGroup;
 			children = (
 				7EA20E4F1E1FE7990029C581 /* Agile Factor */,
 				7EA20E4E1E1FE7990029C581 /* Products */,
+				34B89E9BF7C324188283A267 /* Pods */,
+				A22428E55E891AA67A668D60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +137,43 @@
 			isa = PBXGroup;
 			children = (
 				7EA20E501E1FE7990029C581 /* AppDelegate.swift */,
-				7EA20E521E1FE7990029C581 /* ViewController.swift */,
-				7EA20E541E1FE7990029C581 /* Main.storyboard */,
 				7EA20E571E1FE7990029C581 /* Assets.xcassets */,
 				7EA20E591E1FE7990029C581 /* LaunchScreen.storyboard */,
 				7EA20E5C1E1FE7990029C581 /* Info.plist */,
+				7E9A6A601E263EB8008BA477 /* Model */,
+				7E9A6A611E27AC44008BA477 /* View */,
+				7EA20E661E20067A0029C581 /* Controller */,
+				7E99F84D1E2544E200342F00 /* Managers */,
+				7E9A26801E23F66400FBA70E /* Helpers */,
 			);
 			path = "Agile Factor";
+			sourceTree = "<group>";
+		};
+		7EA20E661E20067A0029C581 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7EA20E621E2006750029C581 /* LoginViewController.swift */,
+				7EA20E631E2006750029C581 /* LoginViewController.xib */,
+				7E247FD01E23A9450007288C /* HomeViewController.swift */,
+				7E247FD11E23A9450007288C /* HomeViewController.xib */,
+				7E247FD41E23A95D0007288C /* VoucherViewController.swift */,
+				7E247FD51E23A95D0007288C /* VoucherViewController.xib */,
+				7E247FD81E23ACB90007288C /* TabBarViewController.swift */,
+				7E247FD91E23ACB90007288C /* TabBarViewController.xib */,
+				7E16BD2B1E23D682006CE0A3 /* SettingsViewController.swift */,
+				7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */,
+				7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */,
+				7E9B13601E2503E500B54CC8 /* ProductsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A22428E55E891AA67A668D60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C12AB84127A2A67854B99C1 /* Pods_Agile_Factor.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EA20E5F1E1FE7990029C581 /* Build configuration list for PBXNativeTarget "Agile Factor" */;
 			buildPhases = (
+				0C2D5F1ED56EA9C0B87B7A00 /* [CP] Check Pods Manifest.lock */,
 				7EA20E491E1FE7990029C581 /* Sources */,
 				7EA20E4A1E1FE7990029C581 /* Frameworks */,
 				7EA20E4B1E1FE7990029C581 /* Resources */,
+				7B2D09B20A329B436F828F98 /* [CP] Embed Pods Frameworks */,
+				BF1C5DA2F3A375328B24A690 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,35 +238,91 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */,
 				7EA20E5B1E1FE7990029C581 /* LaunchScreen.storyboard in Resources */,
 				7EA20E581E1FE7990029C581 /* Assets.xcassets in Resources */,
-				7EA20E561E1FE7990029C581 /* Main.storyboard in Resources */,
+				7E16BD2E1E23D682006CE0A3 /* SettingsViewController.xib in Resources */,
+				7EA20E651E2006750029C581 /* LoginViewController.xib in Resources */,
+				7E247FDB1E23ACB90007288C /* TabBarViewController.xib in Resources */,
+				7E247FD31E23A9450007288C /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C2D5F1ED56EA9C0B87B7A00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B2D09B20A329B436F828F98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Agile Factor/Pods-Agile Factor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF1C5DA2F3A375328B24A690 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Agile Factor/Pods-Agile Factor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7EA20E491E1FE7990029C581 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA20E531E1FE7990029C581 /* ViewController.swift in Sources */,
+				7E9A6A5D1E25529C008BA477 /* API.swift in Sources */,
+				7E9A6A651E27AD55008BA477 /* ViewHelper.swift in Sources */,
+				7EA20E641E2006750029C581 /* LoginViewController.swift in Sources */,
+				7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */,
+				7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */,
+				7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */,
+				7E16BD291E23D673006CE0A3 /* CatalogViewController.swift in Sources */,
+				7E247FD61E23A95D0007288C /* VoucherViewController.swift in Sources */,
 				7EA20E511E1FE7990029C581 /* AppDelegate.swift in Sources */,
+				7E9A6A5F1E263EB4008BA477 /* Member.swift in Sources */,
+				7E247FDA1E23ACB90007288C /* TabBarViewController.swift in Sources */,
+				7E9B13611E2503E500B54CC8 /* ProductsViewController.swift in Sources */,
+				7E247FD21E23A9450007288C /* HomeViewController.swift in Sources */,
+				7E16BD2D1E23D682006CE0A3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7EA20E541E1FE7990029C581 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EA20E551E1FE7990029C581 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7EA20E591E1FE7990029C581 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -209,6 +380,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -251,6 +423,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -258,9 +431,11 @@
 		};
 		7EA20E601E1FE7990029C581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5DE7021D6EEF30E5AB0EA89 /* Pods-Agile Factor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agile Factor/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.sinfic.Agile-Factor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,9 +445,11 @@
 		};
 		7EA20E611E1FE7990029C581 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C5CC0A35886FD5D1C0697E8 /* Pods-Agile Factor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agile Factor/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.sinfic.Agile-Factor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +476,7 @@
 				7EA20E611E1FE7990029C581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

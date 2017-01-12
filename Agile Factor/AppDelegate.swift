@@ -11,11 +11,25 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window?.rootViewController = LoginViewController()
+        window?.makeKeyAndVisible()
+        
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31, alpha: 1)
+        application.statusBarStyle = .lightContent
+        
+//        let statusBarBackgroundView = UIView()
+//        statusBarBackgroundView.backgroundColor =  UIColor.rgb(red: 194, green: 31, blue: 31, alpha: 1)
+//        window?.addSubview(statusBarBackgroundView)
+//        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+//        window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
+
+        ViewHelper.setupStatusBar()
+        
         return true
     }
 
