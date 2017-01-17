@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     
-    struct AgileFactorApi {
+    struct Api {
         static let BaseUrl = "https://s3-us-west-2.amazonaws.com"
         static let Feed = "/youtubeassets/home.json"
     }

@@ -17,7 +17,7 @@ class CatalogViewController:  ProductsViewController {
         super.viewDidLoad()
 
         ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "CatalogoXPTO")
-        navigationController?.hidesBarsOnSwipe = true
+//        navigationController?.hidesBarsOnSwipe = true
         
         setupNavBarButtons()
     }
@@ -33,11 +33,11 @@ class CatalogViewController:  ProductsViewController {
     }
     
     func handleSearch() {
-        print(123)
+        Swift.debugPrint(123)
     }
 
     func handleMore() {
-        print(456)
+        Swift.debugPrint(456)
     }
     
     override func didReceiveMemoryWarning() {

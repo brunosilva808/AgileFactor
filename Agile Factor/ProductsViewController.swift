@@ -12,29 +12,10 @@ private let reuseIdentifier = "Cell"
 
 class ProductsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-//    var products: [Product] = {
-//        var partner: Partner?
-//        partner?.name = "SNL Distribuidora"
-//        
-//        var product1 = Product()
-//        product1.title = "Produto de goiaba com manga e caramelo"
-//        product1.thumbnailImageName = "taylor_swift_blank_space"
-//        product1.points = "1230 points"
-//        product1.partner = partner
-//        
-//        var product2 = Product()
-//        product2.title = "Excelente produto de Goiaba com pêssego e maracujá"
-//        product2.thumbnailImageName = "taylor_swift_bad_blood"
-//        product2.points = "5600 points"
-//        product2.partner = partner
-//        
-//        return [product1, product2]
-//    }()
-    
     var products: [Product]?
     
     func fetchVideos() {
-        LibraryAPI.sharedInstance.fetchVideos { (products) in
+        LibraryAPI.sharedInstance.fetchVideosAlamofire { (products) in
             self.products = products
             self.collectionView?.reloadData()
         }

@@ -27,6 +27,12 @@ extension UIView {
     }
 }
 
+//extension URL {
+//    static func baseUrlWith(string: String) -> URL {
+//        return URL(string: Constants.Api.BaseUrl + string)!
+//    }
+//}
+
 let imageCache = NSCache<AnyObject, AnyObject>()
 
 class CustomImageView: UIImageView {
@@ -49,7 +55,7 @@ class CustomImageView: UIImageView {
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, respones, error) in
             
             if error != nil {
-                print((error?.localizedDescription)!)
+                Swift.debugPrint((error?.localizedDescription)!)
                 return
             }
             
