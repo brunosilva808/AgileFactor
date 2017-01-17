@@ -9,7 +9,7 @@
 import UIKit
 
 class Member: NSObject {
-    var guid: String!
+    var guid: String?
     var name: String?
     
     init(guid: String, name: String) {

@@ -19,11 +19,12 @@ class ViewHelper {
         appDelegate.window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
     }
     
-    static func setupNavBar(navBar: UINavigationController, navItem: UINavigationItem, view: UIView, title: String) {
+    static func setupNavBarTitle(navBar: UINavigationController, navItem: UINavigationItem, view: UIView, title: String) {
         navBar.navigationBar.isTranslucent = false
+        
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-        titleLabel.textAlignment = NSTextAlignment.center
-        titleLabel.text = title
+        titleLabel.textAlignment = NSTextAlignment.left
+        titleLabel.text = " " + title
         titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 20)
 

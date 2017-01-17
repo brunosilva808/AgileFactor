@@ -17,9 +17,12 @@
 		7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD51E23A95D0007288C /* VoucherViewController.xib */; };
 		7E247FDA1E23ACB90007288C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD81E23ACB90007288C /* TabBarViewController.swift */; };
 		7E247FDB1E23ACB90007288C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD91E23ACB90007288C /* TabBarViewController.xib */; };
+		7E58A69D1E27E0F600202AA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A69C1E27E0F600202AA9 /* Constants.swift */; };
+		7E58A69F1E27F17100202AA9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A69E1E27F17100202AA9 /* Product.swift */; };
+		7E58A6A11E2CD36F00202AA9 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A01E2CD36F00202AA9 /* Partner.swift */; };
+		7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */; };
 		7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */; };
 		7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A26811E23F68900FBA70E /* Extensions.swift */; };
-		7E9A6A5D1E25529C008BA477 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A5C1E25529C008BA477 /* API.swift */; };
 		7E9A6A5F1E263EB4008BA477 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A5E1E263EB4008BA477 /* Member.swift */; };
 		7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A621E27AC82008BA477 /* ProductCell.swift */; };
 		7E9A6A651E27AD55008BA477 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A641E27AD55008BA477 /* ViewHelper.swift */; };
@@ -42,9 +45,12 @@
 		7E247FD51E23A95D0007288C /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		7E247FD81E23ACB90007288C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7E247FD91E23ACB90007288C /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		7E58A69C1E27E0F600202AA9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7E58A69E1E27F17100202AA9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		7E58A6A01E2CD36F00202AA9 /* Partner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
+		7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgileRouter.swift; sourceTree = "<group>"; };
 		7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		7E9A26811E23F68900FBA70E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		7E9A6A5C1E25529C008BA477 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7E9A6A5E1E263EB4008BA477 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E9A6A621E27AC82008BA477 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		7E9A6A641E27AD55008BA477 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
@@ -84,7 +90,7 @@
 		7E99F84D1E2544E200342F00 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7E9A6A5C1E25529C008BA477 /* API.swift */,
+				7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */,
 				7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */,
 			);
 			name = Managers;
@@ -95,6 +101,7 @@
 			children = (
 				7E9A26811E23F68900FBA70E /* Extensions.swift */,
 				7E9A6A641E27AD55008BA477 /* ViewHelper.swift */,
+				7E58A69C1E27E0F600202AA9 /* Constants.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				7E9A6A5E1E263EB4008BA477 /* Member.swift */,
+				7E58A69E1E27F17100202AA9 /* Product.swift */,
+				7E58A6A01E2CD36F00202AA9 /* Partner.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 				7EA20E661E20067A0029C581 /* Controller */,
 				7E99F84D1E2544E200342F00 /* Managers */,
 				7E9A26801E23F66400FBA70E /* Helpers */,
+				7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */,
 			);
 			path = "Agile Factor";
 			sourceTree = "<group>";
@@ -162,7 +172,6 @@
 				7E247FD91E23ACB90007288C /* TabBarViewController.xib */,
 				7E16BD2B1E23D682006CE0A3 /* SettingsViewController.swift */,
 				7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */,
-				7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */,
 				7E9B13601E2503E500B54CC8 /* ProductsViewController.swift */,
 			);
 			name = Controller;
@@ -303,16 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E9A6A5D1E25529C008BA477 /* API.swift in Sources */,
 				7E9A6A651E27AD55008BA477 /* ViewHelper.swift in Sources */,
 				7EA20E641E2006750029C581 /* LoginViewController.swift in Sources */,
 				7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */,
 				7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */,
+				7E58A69D1E27E0F600202AA9 /* Constants.swift in Sources */,
 				7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */,
 				7E16BD291E23D673006CE0A3 /* CatalogViewController.swift in Sources */,
+				7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */,
 				7E247FD61E23A95D0007288C /* VoucherViewController.swift in Sources */,
+				7E58A69F1E27F17100202AA9 /* Product.swift in Sources */,
 				7EA20E511E1FE7990029C581 /* AppDelegate.swift in Sources */,
 				7E9A6A5F1E263EB4008BA477 /* Member.swift in Sources */,
+				7E58A6A11E2CD36F00202AA9 /* Partner.swift in Sources */,
 				7E247FDA1E23ACB90007288C /* TabBarViewController.swift in Sources */,
 				7E9B13611E2503E500B54CC8 /* ProductsViewController.swift in Sources */,
 				7E247FD21E23A9450007288C /* HomeViewController.swift in Sources */,
@@ -433,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5DE7021D6EEF30E5AB0EA89 /* Pods-Agile Factor.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agile Factor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -447,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C5CC0A35886FD5D1C0697E8 /* Pods-Agile Factor.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agile Factor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

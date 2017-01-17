@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
 //        NSLog(LibraryAPI.sharedInstance.getAlbums(), 1)
-        
     }
 
     override func didReceiveMemoryWarning() {
