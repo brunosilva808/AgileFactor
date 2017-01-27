@@ -20,7 +20,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        NSLog(LibraryAPI.sharedInstance.getAlbums(), 1)
+        LibraryAPI.sharedInstance.login(username: "leo", password: "password", completion: { response in
+            Swift.debugPrint(response)
+        })
     }
 
     override func didReceiveMemoryWarning() {

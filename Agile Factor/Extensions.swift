@@ -27,11 +27,11 @@ extension UIView {
     }
 }
 
-//extension URL {
-//    static func baseUrlWith(string: String) -> URL {
-//        return URL(string: Constants.Api.BaseUrl + string)!
-//    }
-//}
+extension URL {
+    static func baseUrlWith(string: String) -> URL {
+        return URL(string: Constants.Api.BaseUrl + string)!
+    }
+}
 
 let imageCache = NSCache<AnyObject, AnyObject>()
 

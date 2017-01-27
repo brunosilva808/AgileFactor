@@ -14,10 +14,17 @@ class ProductsViewController: UICollectionViewController, UICollectionViewDelega
     
     var products: [Product]?
     
-    func fetchVideos() {
-        LibraryAPI.sharedInstance.fetchVideosAlamofire { (products) in
-            self.products = products
-            self.collectionView?.reloadData()
+    func fetchProducts() {
+        
+        do {
+            try LibraryAPI.sharedInstance.fetchProductsAlamofire { (products) in
+                self.products = products
+                self.collectionView?.reloadData()
+            }
+        } catch SerializationError.missing(let description) {
+            print(description)
+        } catch {
+            print("default")
         }
     }
     
@@ -29,7 +36,7 @@ class ProductsViewController: UICollectionViewController, UICollectionViewDelega
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ProductCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        fetchVideos()
+        fetchProducts()
         
     }
     
