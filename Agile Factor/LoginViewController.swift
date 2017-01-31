@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
         
         ViewHelper.setupStatusBar(statusBarStyle: .lightContent)
         setupUI()
-//        animateUI()
+        animateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,12 +94,11 @@ class LoginViewController: UIViewController {
         view.addSubview(signInButton)
         view.addSubview(forgetPasswordButton)
 
-        view.addConstraintsWithFormat(format: "H:[v0(160)]", views: logoImageView)
-        view.addConstraintsWithFormat(format: "V:|-40-[v0(160)]", views: logoImageView)
         view.addConstraint(NSLayoutConstraint(item: logoImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
         
-        view.addConstraintsWithFormat(format: "V:|-280-[v0(40)]-10-[v1(40)]-20-[v2(40)]-10-[v3(40)]", views: usernameTextfield, passwordTextfield, loginButton, signInButton)
-        
+        view.addConstraintsWithFormat(format: "V:|-70-[v0(160)]-50-[v1(40)]-10-[v2(40)]-20-[v3(40)]-10-[v4(40)]", views: logoImageView, usernameTextfield, passwordTextfield, loginButton, signInButton)
+
+        view.addConstraintsWithFormat(format: "H:[v0(160)]", views: logoImageView)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: usernameTextfield)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: passwordTextfield)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: loginButton)
@@ -111,6 +110,9 @@ class LoginViewController: UIViewController {
     }
     
     func animateUI() {
+        
+        loginButton.center.y -= 390
+        loginButton.alpha = 0
         usernameTextfield.center.y -= 350
         usernameTextfield.alpha = 0
         passwordTextfield.center.y -= 280
@@ -118,19 +120,31 @@ class LoginViewController: UIViewController {
         loginButton.alpha = 0
         signInButton.alpha = 0
         forgetPasswordButton.alpha = 0
+        self.logoImageView.alpha = 0
 
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.loginButton.center.y += 390
+            self.loginButton.alpha = 1
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 1.0, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.passwordTextfield.center.y += 350
             self.passwordTextfield.alpha = 1
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.usernameTextfield.center.y += 280
             self.usernameTextfield.alpha = 1
-            self.loginButton.alpha = 1
-            self.signInButton.alpha = 1
-            self.forgetPasswordButton.alpha = 1
-        }, completion: nil)
+        }, completion: { bool in
+            if bool == true {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.logoImageView.alpha = 1
+                    self.loginButton.alpha = 1
+                    self.signInButton.alpha = 1
+                    self.forgetPasswordButton.alpha = 1
+                })
+            }
+        })
         
 //        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
 //            self.passwordTextfield.center.y += 350
