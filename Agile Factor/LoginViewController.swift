@@ -11,6 +11,15 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // UIComponents
+    
+    let logoImageView: CustomImageView = {
+        let imageView = CustomImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = #imageLiteral(resourceName: "logo")
+        return imageView
+    }()
+    
     let usernameTextfield: UITextField = {
         let textField = UITextField()
         textField.layer.borderWidth = 1
@@ -67,7 +76,7 @@ class LoginViewController: UIViewController {
         
         ViewHelper.setupStatusBar(statusBarStyle: .lightContent)
         setupUI()
-        animateUI()
+//        animateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,16 +87,20 @@ class LoginViewController: UIViewController {
     // MARK: - SetupUI
     
     func setupUI() {
+        view.addSubview(logoImageView)
         view.addSubview(usernameTextfield)
         view.addSubview(passwordTextfield)
         view.addSubview(loginButton)
         view.addSubview(signInButton)
         view.addSubview(forgetPasswordButton)
-        
-        view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: usernameTextfield)
+
+        view.addConstraintsWithFormat(format: "H:[v0(160)]", views: logoImageView)
+        view.addConstraintsWithFormat(format: "V:|-40-[v0(160)]", views: logoImageView)
+        view.addConstraint(NSLayoutConstraint(item: logoImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
         
         view.addConstraintsWithFormat(format: "V:|-280-[v0(40)]-10-[v1(40)]-20-[v2(40)]-10-[v3(40)]", views: usernameTextfield, passwordTextfield, loginButton, signInButton)
         
+        view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: usernameTextfield)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: passwordTextfield)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: loginButton)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: signInButton)
@@ -106,18 +119,32 @@ class LoginViewController: UIViewController {
         signInButton.alpha = 0
         forgetPasswordButton.alpha = 0
 
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.passwordTextfield.center.y += 350
             self.passwordTextfield.alpha = 1
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.usernameTextfield.center.y += 280
             self.usernameTextfield.alpha = 1
             self.loginButton.alpha = 1
             self.signInButton.alpha = 1
             self.forgetPasswordButton.alpha = 1
         }, completion: nil)
+        
+//        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+//            self.passwordTextfield.center.y += 350
+//            self.passwordTextfield.alpha = 1
+//        }, completion: nil)
+        
+//        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+//            self.usernameTextfield.center.y += 280
+//            self.usernameTextfield.alpha = 1
+//            self.loginButton.alpha = 1
+//            self.signInButton.alpha = 1
+//            self.forgetPasswordButton.alpha = 1
+//        }, completion: nil)
+        
     }
     
     // API
