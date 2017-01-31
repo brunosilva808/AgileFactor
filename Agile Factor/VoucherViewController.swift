@@ -13,7 +13,7 @@ class VoucherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Vouchers".localized, aligment: .center)
     }
 
     override func didReceiveMemoryWarning() {

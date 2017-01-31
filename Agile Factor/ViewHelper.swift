@@ -10,20 +10,23 @@ import UIKit
 
 class ViewHelper {
     
-    static func setupStatusBar(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor =  UIColor.rgb(red: 194, green: 31, blue: 31, alpha: 1)
-        appDelegate.window?.addSubview(statusBarBackgroundView)
-        appDelegate.window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
-        appDelegate.window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
+    static func setupStatusBar(statusBarStyle: UIStatusBarStyle){
+        UIApplication.shared.statusBarStyle = statusBarStyle
+        
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let statusBarBackgroundView = UIView()
+////        statusBarBackgroundView.backgroundColor =  UIColor.rgb(red: 0, green: 122, blue: 255, alpha: 1)
+//        appDelegate.window?.addSubview(statusBarBackgroundView)
+//        appDelegate.window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+//        appDelegate.window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
     }
     
-    static func setupNavBarTitle(navBar: UINavigationController, navItem: UINavigationItem, view: UIView, title: String) {
+    static func setupNavBarTitle(navBar: UINavigationController, navItem: UINavigationItem, view: UIView, title: String, aligment: NSTextAlignment) {
         navBar.navigationBar.isTranslucent = false
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-        titleLabel.textAlignment = NSTextAlignment.left
+        
+        titleLabel.textAlignment = aligment
         titleLabel.text = " " + title
         titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 20)

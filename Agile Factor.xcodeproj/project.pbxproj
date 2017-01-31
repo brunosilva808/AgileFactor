@@ -22,6 +22,12 @@
 		7E58A6A11E2CD36F00202AA9 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A01E2CD36F00202AA9 /* Partner.swift */; };
 		7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */; };
 		7E6331101E30C6130026566B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E63310F1E30C6130026566B /* Weather.swift */; };
+		7E9554C51E40ACA000E187F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9554C31E40ACA000E187F1 /* SignInViewController.swift */; };
+		7E9554C61E40ACA000E187F1 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9554C41E40ACA000E187F1 /* SignInViewController.xib */; };
+		7E9554CA1E40B62800E187F1 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9554C91E40B62800E187F1 /* Localizator.swift */; };
+		7E9554CB1E40B9FF00E187F1 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E9554CD1E40B9FF00E187F1 /* Localizable.plist */; };
+		7E9554D21E40CEE000E187F1 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9554D11E40CEE000E187F1 /* CustomImageView.swift */; };
+		7E9554D41E40D1B000E187F1 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9554D31E40D1B000E187F1 /* ProductsViewController.xib */; };
 		7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */; };
 		7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A26811E23F68900FBA70E /* Extensions.swift */; };
 		7E9A6A5F1E263EB4008BA477 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A6A5E1E263EB4008BA477 /* Member.swift */; };
@@ -51,6 +57,14 @@
 		7E58A6A01E2CD36F00202AA9 /* Partner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
 		7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgileRouter.swift; sourceTree = "<group>"; };
 		7E63310F1E30C6130026566B /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		7E9554C31E40ACA000E187F1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7E9554C41E40ACA000E187F1 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		7E9554C91E40B62800E187F1 /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
+		7E9554CC1E40B9FF00E187F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
+		7E9554CF1E40BA8F00E187F1 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7E9554D01E40BA8F00E187F1 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pt-PT"; path = "pt-PT.lproj/Localizable.plist"; sourceTree = "<group>"; };
+		7E9554D11E40CEE000E187F1 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		7E9554D31E40D1B000E187F1 /* ProductsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		7E9A26811E23F68900FBA70E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7E9A6A5E1E263EB4008BA477 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
@@ -93,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				7E63310F1E30C6130026566B /* Weather.swift */,
-				7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */,
 				7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */,
 			);
 			name = Managers;
@@ -105,6 +118,7 @@
 				7E9A26811E23F68900FBA70E /* Extensions.swift */,
 				7E9A6A641E27AD55008BA477 /* ViewHelper.swift */,
 				7E58A69C1E27E0F600202AA9 /* Constants.swift */,
+				7E9554D11E40CEE000E187F1 /* CustomImageView.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -158,6 +172,8 @@
 				7E99F84D1E2544E200342F00 /* Managers */,
 				7E9A26801E23F66400FBA70E /* Helpers */,
 				7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */,
+				7E9554CD1E40B9FF00E187F1 /* Localizable.plist */,
+				7E9554C91E40B62800E187F1 /* Localizator.swift */,
 			);
 			path = "Agile Factor";
 			sourceTree = "<group>";
@@ -165,17 +181,21 @@
 		7EA20E661E20067A0029C581 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7E247FD81E23ACB90007288C /* TabBarViewController.swift */,
+				7E247FD91E23ACB90007288C /* TabBarViewController.xib */,
 				7EA20E621E2006750029C581 /* LoginViewController.swift */,
 				7EA20E631E2006750029C581 /* LoginViewController.xib */,
 				7E247FD01E23A9450007288C /* HomeViewController.swift */,
 				7E247FD11E23A9450007288C /* HomeViewController.xib */,
 				7E247FD41E23A95D0007288C /* VoucherViewController.swift */,
 				7E247FD51E23A95D0007288C /* VoucherViewController.xib */,
-				7E247FD81E23ACB90007288C /* TabBarViewController.swift */,
-				7E247FD91E23ACB90007288C /* TabBarViewController.xib */,
 				7E16BD2B1E23D682006CE0A3 /* SettingsViewController.swift */,
 				7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */,
+				7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */,
 				7E9B13601E2503E500B54CC8 /* ProductsViewController.swift */,
+				7E9554D31E40D1B000E187F1 /* ProductsViewController.xib */,
+				7E9554C31E40ACA000E187F1 /* SignInViewController.swift */,
+				7E9554C41E40ACA000E187F1 /* SignInViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,6 +254,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-PT",
 			);
 			mainGroup = 7EA20E441E1FE7990029C581;
 			productRefGroup = 7EA20E4E1E1FE7990029C581 /* Products */;
@@ -250,9 +271,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9554C61E40ACA000E187F1 /* SignInViewController.xib in Resources */,
 				7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */,
 				7EA20E5B1E1FE7990029C581 /* LaunchScreen.storyboard in Resources */,
 				7EA20E581E1FE7990029C581 /* Assets.xcassets in Resources */,
+				7E9554D41E40D1B000E187F1 /* ProductsViewController.xib in Resources */,
+				7E9554CB1E40B9FF00E187F1 /* Localizable.plist in Resources */,
 				7E16BD2E1E23D682006CE0A3 /* SettingsViewController.xib in Resources */,
 				7EA20E651E2006750029C581 /* LoginViewController.xib in Resources */,
 				7E247FDB1E23ACB90007288C /* TabBarViewController.xib in Resources */,
@@ -319,11 +343,14 @@
 				7EA20E641E2006750029C581 /* LoginViewController.swift in Sources */,
 				7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */,
 				7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */,
+				7E9554CA1E40B62800E187F1 /* Localizator.swift in Sources */,
 				7E6331101E30C6130026566B /* Weather.swift in Sources */,
 				7E58A69D1E27E0F600202AA9 /* Constants.swift in Sources */,
 				7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */,
 				7E16BD291E23D673006CE0A3 /* CatalogViewController.swift in Sources */,
 				7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */,
+				7E9554D21E40CEE000E187F1 /* CustomImageView.swift in Sources */,
+				7E9554C51E40ACA000E187F1 /* SignInViewController.swift in Sources */,
 				7E247FD61E23A95D0007288C /* VoucherViewController.swift in Sources */,
 				7E58A69F1E27F17100202AA9 /* Product.swift in Sources */,
 				7EA20E511E1FE7990029C581 /* AppDelegate.swift in Sources */,
@@ -339,10 +366,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7E9554CD1E40B9FF00E187F1 /* Localizable.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E9554CC1E40B9FF00E187F1 /* Base */,
+				7E9554D01E40BA8F00E187F1 /* pt-PT */,
+			);
+			name = Localizable.plist;
+			sourceTree = "<group>";
+		};
 		7EA20E591E1FE7990029C581 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7EA20E5A1E1FE7990029C581 /* Base */,
+				7E9554CF1E40BA8F00E187F1 /* pt-PT */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -354,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -405,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

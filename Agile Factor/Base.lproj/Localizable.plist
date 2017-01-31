@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Login</key>
+	<dict>
+		<key>value</key>
+		<string>Login</string>
+		<key>comment</key>
+		<string>Label for Login action in the Login screen</string>
+	</dict>
+	<key>Username</key>
+	<dict>
+		<key>value</key>
+		<string>Username</string>
+		<key>comment</key>
+		<string>Placeholder for username in the Login screen</string>
+	</dict>
+	<key>Password</key>
+	<dict>
+		<key>value</key>
+		<string>Password</string>
+		<key>comment</key>
+		<string>Placeholder for password in the Login screen</string>
+	</dict>
+	<key>Forgot Password</key>
+	<dict>
+		<key>value</key>
+		<string>Forgot Password</string>
+		<key>comment</key>
+		<string>Generic string for Forgot Password action</string>
+	</dict>
+	<key>Sign In</key>
+	<dict>
+		<key>value</key>
+		<string>Sign In</string>
+		<key>comment</key>
+		<string>Label for Sign In action in Login screen</string>
+	</dict>
+    <key>Credentials invalid!</key>
+    <dict>
+        <key>value</key>
+        <string>Credentials invalid!</string>
+        <key>comment</key>
+        <string>Message for failed Login action in Login screen</string>
+    </dict>
+    <key>Home</key>
+    <dict>
+        <key>value</key>
+        <string>Home</string>
+        <key>comment</key>
+        <string>Label for tab bar</string>
+    </dict>
+    <key>Vouchers</key>
+    <dict>
+        <key>value</key>
+        <string>Vouchers</string>
+        <key>comment</key>
+        <string>Label for tab bar</string>
+    </dict>
+    <key>Points</key>
+    <dict>
+        <key>value</key>
+        <string>Points</string>
+        <key>comment</key>
+        <string>Label for tab bar</string>
+    </dict>
+    <key>Catalog</key>
+    <dict>
+        <key>value</key>
+        <string>Catalog</string>
+        <key>comment</key>
+        <string>Label for tab bar</string>
+    </dict>
+    <key>Settings</key>
+    <dict>
+        <key>value</key>
+        <string>Settings</string>
+        <key>comment</key>
+        <string>Label for tab bar</string>
+    </dict>
+</dict>
+</plist>

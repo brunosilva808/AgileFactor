@@ -8,7 +8,26 @@
 
 import UIKit
 
+extension UIAlertController {
+    static func alertView(title: String, message: String, buttonTitle: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle:  UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.default)
+        alert.addAction(okAction)
+        
+        return alert
+    }
+}
+
 extension UIColor {
+
+    static func lightGraySystem() -> UIColor{
+        return UIColor.rgb(red: 225, green: 225, blue: 225, alpha: 1)
+    }
+    
+    static func blueSystem() -> UIColor{
+        return UIColor.rgb(red: 0, green: 122, blue: 255, alpha: 1)
+    }
+    
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
     }
@@ -31,46 +50,4 @@ extension URL {
     static func baseUrlWith(string: String) -> URL {
         return URL(string: Constants.Api.BaseUrl + string)!
     }
-}
-
-let imageCache = NSCache<AnyObject, AnyObject>()
-
-class CustomImageView: UIImageView {
-    
-    var imageUrlString: String?
-    
-    func loadImageUsingUrlString(urlString: String) {
-        
-        imageUrlString = urlString
-        
-        let url = URL(string: urlString)
-        
-        image = nil
-        
-        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
-            self.image = imageFromCache
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url!, completionHandler: { (data, respones, error) in
-            
-            if error != nil {
-                Swift.debugPrint((error?.localizedDescription)!)
-                return
-            }
-            
-            DispatchQueue.main.async(execute: {
-                
-                let imageToCache = UIImage(data: data!)
-                
-                if self.imageUrlString == urlString {
-                    self.image = imageToCache
-                }
-                
-                imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
-            })
-            
-        }).resume()
-    }
-    
 }

@@ -9,17 +9,16 @@
 import UIKit
 
 class Member: NSObject {
-    var guid: String?
+    var guid: Int?
     var name: String?
-    
-    init(guid: String, name: String) {
-        super.init()
-        self.guid = guid
-        self.name = name
-    }
-    
+
     override var description: String {
-        return  "id: \(guid)" +
+        
+        guard let guid = self.guid else {
+            return "Member id is null"
+        }
+        
+        return  "id: \(guid)\n" +
                 "name: \(name)"
     }
     

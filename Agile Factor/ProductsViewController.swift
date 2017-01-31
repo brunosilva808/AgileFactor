@@ -15,23 +15,18 @@ class ProductsViewController: UICollectionViewController, UICollectionViewDelega
     var products: [Product]?
     
     func fetchProducts() {
-        
-        do {
-            try LibraryAPI.sharedInstance.fetchProductsAlamofire { (products) in
+        LibraryAPI.sharedInstance.fetchProductsAlamofire { (products) in
                 self.products = products
                 self.collectionView?.reloadData()
             }
-        } catch SerializationError.missing(let description) {
-            print(description)
-        } catch {
-            print("default")
-        }
     }
     
     // MARK: - Class Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Points".localized
         
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ProductCell.self, forCellWithReuseIdentifier: reuseIdentifier)

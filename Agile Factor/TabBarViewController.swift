@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view. 
+        ViewHelper.setupStatusBar(statusBarStyle: .lightContent)
         
         // Implement View Controllers
         let myVC1 = HomeViewController(nibName: "HomeViewController", bundle: nil)
@@ -36,19 +36,19 @@ class TabBarViewController: UITabBarController {
         
         // Tab bar customization 
         myVC1.tabBarItem = UITabBarItem(
-            title: "home",
+            title: "Home".localized,
             image: firstImage,
             tag: 1)
         myVC2.tabBarItem = UITabBarItem(
-            title: "Vouchers",
+            title: "Points".localized,
             image: secondImage,
             tag:2)
         myVC3.tabBarItem = UITabBarItem(
-            title: "Points",
+            title: "Catalog".localized,
             image: secondImage,
             tag:3)
         myVC4.tabBarItem = UITabBarItem(
-            title: "Settings",
+            title: "Settings".localized,
             image: secondImage,
             tag:4)
     }
@@ -58,15 +58,4 @@ class TabBarViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

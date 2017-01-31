@@ -16,9 +16,7 @@ class CatalogViewController:  ProductsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "CatalogoXPTO")
-//        navigationController?.hidesBarsOnSwipe = true
-        
+        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Catalog".localized, aligment: .left)
         setupNavBarButtons()
     }
 
