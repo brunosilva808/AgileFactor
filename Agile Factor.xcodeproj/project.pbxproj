@@ -17,6 +17,8 @@
 		7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD51E23A95D0007288C /* VoucherViewController.xib */; };
 		7E247FDA1E23ACB90007288C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD81E23ACB90007288C /* TabBarViewController.swift */; };
 		7E247FDB1E23ACB90007288C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD91E23ACB90007288C /* TabBarViewController.xib */; };
+		7E289ACA1E41E4730052AEAF /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E289AC81E41E4730052AEAF /* PinCodeViewController.swift */; };
+		7E289ACB1E41E4730052AEAF /* PinCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E289AC91E41E4730052AEAF /* PinCodeViewController.xib */; };
 		7E58A69D1E27E0F600202AA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A69C1E27E0F600202AA9 /* Constants.swift */; };
 		7E58A69F1E27F17100202AA9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A69E1E27F17100202AA9 /* Product.swift */; };
 		7E58A6A11E2CD36F00202AA9 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A01E2CD36F00202AA9 /* Partner.swift */; };
@@ -52,6 +54,8 @@
 		7E247FD51E23A95D0007288C /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		7E247FD81E23ACB90007288C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7E247FD91E23ACB90007288C /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		7E289AC81E41E4730052AEAF /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
+		7E289AC91E41E4730052AEAF /* PinCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinCodeViewController.xib; sourceTree = "<group>"; };
 		7E58A69C1E27E0F600202AA9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7E58A69E1E27F17100202AA9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7E58A6A01E2CD36F00202AA9 /* Partner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				7E9554D31E40D1B000E187F1 /* ProductsViewController.xib */,
 				7E9554C31E40ACA000E187F1 /* SignInViewController.swift */,
 				7E9554C41E40ACA000E187F1 /* SignInViewController.xib */,
+				7E289AC81E41E4730052AEAF /* PinCodeViewController.swift */,
+				7E289AC91E41E4730052AEAF /* PinCodeViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */,
 				7EA20E5B1E1FE7990029C581 /* LaunchScreen.storyboard in Resources */,
 				7EA20E581E1FE7990029C581 /* Assets.xcassets in Resources */,
+				7E289ACB1E41E4730052AEAF /* PinCodeViewController.xib in Resources */,
 				7E9554D41E40D1B000E187F1 /* ProductsViewController.xib in Resources */,
 				7E9554CB1E40B9FF00E187F1 /* Localizable.plist in Resources */,
 				7E16BD2E1E23D682006CE0A3 /* SettingsViewController.xib in Resources */,
@@ -340,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9A6A651E27AD55008BA477 /* ViewHelper.swift in Sources */,
+				7E289ACA1E41E4730052AEAF /* PinCodeViewController.swift in Sources */,
 				7EA20E641E2006750029C581 /* LoginViewController.swift in Sources */,
 				7E9A26821E23F68900FBA70E /* Extensions.swift in Sources */,
 				7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */,
