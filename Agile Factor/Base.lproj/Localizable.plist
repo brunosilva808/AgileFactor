@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Enter Pin Code</key>
+    <dict>
+        <key>value</key>
+        <string>Enter Pin Code</string>
+        <key>comment</key>
+        <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
+    <key>Delete</key>
+    <dict>
+        <key>value</key>
+        <string>Delete</string>
+        <key>comment</key>
+        <string>Title for Delete Button in Pin Code Screen</string>
+    </dict>
 	<key>Login</key>
 	<dict>
 		<key>value</key>
