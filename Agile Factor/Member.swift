@@ -11,6 +11,7 @@ import UIKit
 class Member: NSObject {
     var guid: Int?
     var name: String?
+    var balance: Balance?
 
     override var description: String {
         
@@ -19,7 +20,8 @@ class Member: NSObject {
         }
         
         return  "id: \(guid)\n" +
-                "name: \(name)"
+                "name: \(self.name)" +
+                "balance: \(self.balance)"
     }
     
 }

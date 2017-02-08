@@ -28,8 +28,8 @@ class PasswordLoginViewController: UIViewController {
         passwordContainerView.delegate = self
         passwordContainerView.highlightedColor = UIColor.blueSystem()
         passwordContainerView.deleteButton.setTitle("Delete".localized, for: .normal)
-        passwordContainerView.deleteButton.alpha = 0
     }
+    
 }
 
 extension PasswordLoginViewController: PasswordInputCompleteProtocol {

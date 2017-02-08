@@ -13,8 +13,8 @@
 		7E16BD2E1E23D682006CE0A3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */; };
 		7E247FD21E23A9450007288C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD01E23A9450007288C /* HomeViewController.swift */; };
 		7E247FD31E23A9450007288C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD11E23A9450007288C /* HomeViewController.xib */; };
-		7E247FD61E23A95D0007288C /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD41E23A95D0007288C /* VoucherViewController.swift */; };
-		7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD51E23A95D0007288C /* VoucherViewController.xib */; };
+		7E247FD61E23A95D0007288C /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD41E23A95D0007288C /* PointsViewController.swift */; };
+		7E247FD71E23A95D0007288C /* PointsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD51E23A95D0007288C /* PointsViewController.xib */; };
 		7E247FDA1E23ACB90007288C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E247FD81E23ACB90007288C /* TabBarViewController.swift */; };
 		7E247FDB1E23ACB90007288C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E247FD91E23ACB90007288C /* TabBarViewController.xib */; };
 		7E58A69D1E27E0F600202AA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A69C1E27E0F600202AA9 /* Constants.swift */; };
@@ -39,11 +39,16 @@
 		7EA20E5B1E1FE7990029C581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA20E591E1FE7990029C581 /* LaunchScreen.storyboard */; };
 		7EA20E641E2006750029C581 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA20E621E2006750029C581 /* LoginViewController.swift */; };
 		7EA20E651E2006750029C581 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA20E631E2006750029C581 /* LoginViewController.xib */; };
+		7EB97F061E4B61890083E02E /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB97F041E4B61890083E02E /* PinCodeViewController.swift */; };
+		7EB97F071E4B61890083E02E /* PinCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB97F051E4B61890083E02E /* PinCodeViewController.xib */; };
 		7ED78E661E42360400D14C30 /* BlurPasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED78E641E42360400D14C30 /* BlurPasswordLoginViewController.swift */; };
 		7ED78E691E42389F00D14C30 /* MyPasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED78E681E42389F00D14C30 /* MyPasswordUIValidation.swift */; };
 		7ED78E6B1E42402300D14C30 /* BlurPasswordLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ED78E6A1E42402300D14C30 /* BlurPasswordLoginViewController.xib */; };
 		7ED78E7D1E4347D100D14C30 /* PasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED78E7C1E4347D100D14C30 /* PasswordLoginViewController.swift */; };
 		7ED78E7F1E4347FD00D14C30 /* PasswordLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ED78E7E1E4347FD00D14C30 /* PasswordLoginViewController.xib */; };
+		7EF5FF351E439BCE00BBF759 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5FF341E439BCE00BBF759 /* Balance.swift */; };
+		7EF5FF381E44AA6200BBF759 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5FF371E44AA6200BBF759 /* Server.swift */; };
+		7EF5FF3A1E44CCE800BBF759 /* KeychainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5FF391E44CCE800BBF759 /* KeychainClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,8 +58,8 @@
 		7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		7E247FD01E23A9450007288C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E247FD11E23A9450007288C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		7E247FD41E23A95D0007288C /* VoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
-		7E247FD51E23A95D0007288C /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
+		7E247FD41E23A95D0007288C /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
+		7E247FD51E23A95D0007288C /* PointsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PointsViewController.xib; sourceTree = "<group>"; };
 		7E247FD81E23ACB90007288C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7E247FD91E23ACB90007288C /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		7E58A69C1E27E0F600202AA9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -83,11 +88,16 @@
 		7EA20E5C1E1FE7990029C581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA20E621E2006750029C581 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7EA20E631E2006750029C581 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7EB97F041E4B61890083E02E /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
+		7EB97F051E4B61890083E02E /* PinCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinCodeViewController.xib; sourceTree = "<group>"; };
 		7ED78E641E42360400D14C30 /* BlurPasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurPasswordLoginViewController.swift; sourceTree = "<group>"; };
 		7ED78E681E42389F00D14C30 /* MyPasswordUIValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPasswordUIValidation.swift; sourceTree = "<group>"; };
 		7ED78E6A1E42402300D14C30 /* BlurPasswordLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurPasswordLoginViewController.xib; sourceTree = "<group>"; };
 		7ED78E7C1E4347D100D14C30 /* PasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLoginViewController.swift; sourceTree = "<group>"; };
 		7ED78E7E1E4347FD00D14C30 /* PasswordLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordLoginViewController.xib; sourceTree = "<group>"; };
+		7EF5FF341E439BCE00BBF759 /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		7EF5FF371E44AA6200BBF759 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		7EF5FF391E44CCE800BBF759 /* KeychainClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainClass.swift; sourceTree = "<group>"; };
 		9C5CC0A35886FD5D1C0697E8 /* Pods-Agile Factor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agile Factor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Agile Factor/Pods-Agile Factor.release.xcconfig"; sourceTree = "<group>"; };
 		B5DE7021D6EEF30E5AB0EA89 /* Pods-Agile Factor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agile Factor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Agile Factor/Pods-Agile Factor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +128,8 @@
 			children = (
 				7E63310F1E30C6130026566B /* Weather.swift */,
 				7E99F84B1E2544DD00342F00 /* LibraryAPI.swift */,
+				7EF5FF371E44AA6200BBF759 /* Server.swift */,
+				7EF5FF391E44CCE800BBF759 /* KeychainClass.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -140,6 +152,7 @@
 				7E9A6A5E1E263EB4008BA477 /* Member.swift */,
 				7E58A69E1E27F17100202AA9 /* Product.swift */,
 				7E58A6A01E2CD36F00202AA9 /* Partner.swift */,
+				7EF5FF341E439BCE00BBF759 /* Balance.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,8 +210,8 @@
 				7EA20E631E2006750029C581 /* LoginViewController.xib */,
 				7E247FD01E23A9450007288C /* HomeViewController.swift */,
 				7E247FD11E23A9450007288C /* HomeViewController.xib */,
-				7E247FD41E23A95D0007288C /* VoucherViewController.swift */,
-				7E247FD51E23A95D0007288C /* VoucherViewController.xib */,
+				7E247FD41E23A95D0007288C /* PointsViewController.swift */,
+				7E247FD51E23A95D0007288C /* PointsViewController.xib */,
 				7E16BD2B1E23D682006CE0A3 /* SettingsViewController.swift */,
 				7E16BD2C1E23D682006CE0A3 /* SettingsViewController.xib */,
 				7E16BD271E23D673006CE0A3 /* CatalogViewController.swift */,
@@ -206,6 +219,8 @@
 				7E9554D31E40D1B000E187F1 /* ProductsViewController.xib */,
 				7E9554C31E40ACA000E187F1 /* SignInViewController.swift */,
 				7E9554C41E40ACA000E187F1 /* SignInViewController.xib */,
+				7EB97F041E4B61890083E02E /* PinCodeViewController.swift */,
+				7EB97F051E4B61890083E02E /* PinCodeViewController.xib */,
 				7ED78E641E42360400D14C30 /* BlurPasswordLoginViewController.swift */,
 				7ED78E6A1E42402300D14C30 /* BlurPasswordLoginViewController.xib */,
 				7ED78E7C1E4347D100D14C30 /* PasswordLoginViewController.swift */,
@@ -287,10 +302,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9554C61E40ACA000E187F1 /* SignInViewController.xib in Resources */,
-				7E247FD71E23A95D0007288C /* VoucherViewController.xib in Resources */,
+				7E247FD71E23A95D0007288C /* PointsViewController.xib in Resources */,
 				7EA20E5B1E1FE7990029C581 /* LaunchScreen.storyboard in Resources */,
 				7EA20E581E1FE7990029C581 /* Assets.xcassets in Resources */,
 				7E9554D41E40D1B000E187F1 /* ProductsViewController.xib in Resources */,
+				7EB97F071E4B61890083E02E /* PinCodeViewController.xib in Resources */,
 				7E9554CB1E40B9FF00E187F1 /* Localizable.plist in Resources */,
 				7E16BD2E1E23D682006CE0A3 /* SettingsViewController.xib in Resources */,
 				7ED78E6B1E42402300D14C30 /* BlurPasswordLoginViewController.xib in Resources */,
@@ -363,6 +379,7 @@
 				7E99F84C1E2544DD00342F00 /* LibraryAPI.swift in Sources */,
 				7E9554CA1E40B62800E187F1 /* Localizator.swift in Sources */,
 				7E6331101E30C6130026566B /* Weather.swift in Sources */,
+				7EB97F061E4B61890083E02E /* PinCodeViewController.swift in Sources */,
 				7E58A69D1E27E0F600202AA9 /* Constants.swift in Sources */,
 				7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */,
 				7ED78E691E42389F00D14C30 /* MyPasswordUIValidation.swift in Sources */,
@@ -370,8 +387,10 @@
 				7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */,
 				7E9554D21E40CEE000E187F1 /* CustomImageView.swift in Sources */,
 				7E9554C51E40ACA000E187F1 /* SignInViewController.swift in Sources */,
-				7E247FD61E23A95D0007288C /* VoucherViewController.swift in Sources */,
+				7EF5FF3A1E44CCE800BBF759 /* KeychainClass.swift in Sources */,
+				7E247FD61E23A95D0007288C /* PointsViewController.swift in Sources */,
 				7E58A69F1E27F17100202AA9 /* Product.swift in Sources */,
+				7EF5FF351E439BCE00BBF759 /* Balance.swift in Sources */,
 				7EA20E511E1FE7990029C581 /* AppDelegate.swift in Sources */,
 				7E9A6A5F1E263EB4008BA477 /* Member.swift in Sources */,
 				7E58A6A11E2CD36F00202AA9 /* Partner.swift in Sources */,
@@ -379,6 +398,7 @@
 				7E9B13611E2503E500B54CC8 /* ProductsViewController.swift in Sources */,
 				7ED78E7D1E4347D100D14C30 /* PasswordLoginViewController.swift in Sources */,
 				7E247FD21E23A9450007288C /* HomeViewController.swift in Sources */,
+				7EF5FF381E44AA6200BBF759 /* Server.swift in Sources */,
 				7E16BD2D1E23D682006CE0A3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

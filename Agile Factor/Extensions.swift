@@ -46,6 +46,22 @@ extension UIView {
     }
 }
 
+extension URLRequest {
+    static func requestGET(url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        return request
+    }
+    
+    static func requestPOST(url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        return request
+    }
+}
+
 extension URL {
     static func baseUrlWith(string: String) -> URL {
         return URL(string: Constants.Api.BaseUrl + string)!

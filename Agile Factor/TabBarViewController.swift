@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
         
         // Implement View Controllers
         let myVC1 = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let myVC2 = VoucherViewController(nibName: "VoucherViewController", bundle: nil)
+        let myVC2 = PointsViewController(nibName: "PointsViewController", bundle: nil)
         let layout = UICollectionViewFlowLayout()
         let myVC3 = CatalogViewController(collectionViewLayout: layout)
         let myVC4 = SettingsViewController(nibName: "SettingsViewController", bundle: nil)

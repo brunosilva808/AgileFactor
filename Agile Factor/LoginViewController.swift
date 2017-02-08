@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - SetupUI
     
-    func setupUI() {
+    internal func setupUI() {
         view.addSubview(logoImageView)
         view.addSubview(usernameTextfield)
         view.addSubview(passwordTextfield)
@@ -109,7 +109,7 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonTouched), for: .touchUpInside)
     }
     
-    func animateUI() {
+    internal func animateUI() {
         
         loginButton.center.y -= 390
         loginButton.alpha = 0
@@ -164,9 +164,9 @@ class LoginViewController: UIViewController {
     // API
     
     func loginAPI(){
-        LibraryAPI.sharedInstance.login(username: usernameTextfield.text!, password: passwordTextfield.text!, completion: { member in
+        LibraryAPI.sharedInstance.login(username: usernameTextfield.text!, password: passwordTextfield.text!, completion: { response in
             
-            guard member.guid != nil else {
+            guard response == true else {
                 let alert = UIAlertController.alertView(title: "Login".localized, message: "Credentials invalid!".localized, buttonTitle: "Ok")
                 self.present(alert, animated: true, completion: nil)
                 
