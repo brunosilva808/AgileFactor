@@ -63,6 +63,11 @@ extension URLRequest {
 }
 
 extension URL {
+    
+    static func baseUrlWith(service: String, parameters: String) -> URL {
+        return URL(string: K.Api.baseUrl + service + parameters)!
+    }
+    
     static func baseUrlWith(string: String) -> URL {
         return URL(string: K.Api.baseUrl + string)!
     }

@@ -10,41 +10,41 @@ import UIKit
 
 class Server: NSObject {
     
-    static func initWithURL(service: String, method: String, variables: NSMutableDictionary) -> Bool {
-    
-        let urlString = K.Api.baseUrl + service + self.buildVariables(variables: variables) + self.defaultVariables(variables: variables)
-    
-        let url = URL.baseUrlWith(string: urlString)
+    static func initWithURL(service: String, method: String, parameters: NSMutableDictionary) -> URLRequest {
+        
+        let parametersString = self.buildparameters(parameters: parameters)
+        let url = URL.baseUrlWith(service: service, parameters: parametersString)
         var request = URLRequest(url: url)
         request.httpMethod = method
     
-        return true
+        return request
     }
     
-    static func defaultVariables(variables: NSMutableDictionary) -> String {
-        variables["member_balance_loan"] = "1"
-        variables["programId"] = "1"
-        variables["member_balance_actual"] = "0"
-        variables["languageId"] = "1"
-        variables["brandId"] = "1"
-        variables["member_balance_available"] = "0"
-        variables["channelId"] = "4"
+    static func addDefaultparameters(parameters: NSMutableDictionary) -> NSMutableDictionary {
+        parameters["member_balance_loan"] = "1"
+        parameters["programId"] = "1"
+        parameters["member_balance_actual"] = "0"
+        parameters["languageId"] = "1"
+        parameters["brandId"] = "2"
+        parameters["member_balance_available"] = "0"
+        parameters["channelId"] = "4"
         
-        return buildVariables(variables: variables)
+        return parameters
     }
-    
-    static func buildVariables(variables: NSMutableDictionary) -> String{
         
+    static func buildparameters(parameters: NSMutableDictionary) -> String{
+        
+        let parametersTmp = addDefaultparameters(parameters: parameters)
         var path = ""
         
-        let enumerator = variables.keyEnumerator()
+        let enumerator = parametersTmp.keyEnumerator()
         while let key = enumerator.nextObject() {
             
             if path.characters.count > 0 {
                 path += "&"
             }
             
-            if let field = variables[key] {
+            if let field = parametersTmp[key] {
                 path += "\(key)=" + "\(field)"
             } else {
                 path += "\(key)=" + ""

@@ -18,8 +18,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Home".localized, aligment: .center)
-        
-//        loginVCID = isBlurUI ? "BlurPasswordLoginViewController" : "PasswordLoginViewController"
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,11 +26,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func presentLoginVC(_ sender: AnyObject) {
-//        present(loginVCID)
-        present()
+        presentPassCodeViewController()
     }
     
-    func present() {
+    func presentPassCodeViewController() {
         let loginVC = PasswordLoginViewController()
         present(loginVC, animated: false, completion: nil)
     }

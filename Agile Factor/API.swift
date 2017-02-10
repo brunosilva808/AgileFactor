@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import KeychainAccess
 
-class API {
+class API: Server {
     
     // Var
     
@@ -22,7 +22,7 @@ class API {
     
     static let sharedInstance = API()
     
-    private init() {
+    private override init() {
         member = Member()
         keychain = KeychainService()
         password = ""
@@ -46,14 +46,53 @@ class API {
     
     // Class Methods
     
+//    func login(username: String, password: String ,completion: @escaping (Bool) -> ()) {
+//        let url = URL.baseUrlWith(string: K.Api.login(username: username, password: password))
+//        let request = URLRequest.requestGET(url: url)
+//        
+//        weak var weakSelf = self
+//        
+//        Alamofire.request(request).validate().responseJSON { response in
+//
+//            let answer =  weakSelf?.validateJSON(response: response)
+//            
+//            guard answer?.success == true else {
+//                return
+//            }
+//            
+//            guard let array = answer?.dict["CREATE"] as? [[String: AnyObject]] else {
+//                Swift.debugPrint("Wrong JSON Tags!")
+//                return
+//            }
+//
+//            for object in array {
+//                weakSelf?.member.guid = object["member_eid"] as? Int
+//                weakSelf?.member.username = username
+//                weakSelf?.password = password
+//            }
+//            
+//            DispatchQueue.main.async {
+//                if  weakSelf?.member.guid == nil {
+//                    completion(false)
+//                } else {
+//                     weakSelf?.keychain.saveToKeychain(value: password, key: K.Secure.passwordKey)
+//                    completion(true)
+//                }
+//            }
+//        }
+//    }
+    
     func login(username: String, password: String ,completion: @escaping (Bool) -> ()) {
-        let url = URL.baseUrlWith(string: K.Api.login(username: username, password: password))
-        let request = URLRequest.requestGET(url: url)
+        var parameters = NSMutableDictionary()
+        parameters = ["member_account_pwd"   : password,
+                      "member_account_login" : username]
+        
+        let request = Server.initWithURL(service: K.Api.login, method: K.RequestMethod.GET, parameters: parameters)
         
         weak var weakSelf = self
         
         Alamofire.request(request).validate().responseJSON { response in
-
+            
             let answer =  weakSelf?.validateJSON(response: response)
             
             guard answer?.success == true else {
@@ -64,83 +103,31 @@ class API {
                 Swift.debugPrint("Wrong JSON Tags!")
                 return
             }
-
+            
             for object in array {
                 weakSelf?.member.guid = object["member_eid"] as? Int
                 weakSelf?.member.username = username
                 weakSelf?.password = password
             }
             
-            weakSelf?.credentials()
-            
             DispatchQueue.main.async {
                 if  weakSelf?.member.guid == nil {
                     completion(false)
                 } else {
-                     weakSelf?.keychain.saveToKeychain(value: password, key: K.Secure.passwordKey)
+                    weakSelf?.keychain.saveToKeychain(value: password, key: K.Secure.passwordKey)
                     completion(true)
                 }
             }
         }
-    }
-    
-    func credentials() {
-        var variables = NSMutableDictionary()
-        variables = ["member_account_pwd"   : self.password,
-                     "member_account_login" : self.member.username!]
-        
-        Swift.debugPrint(initWithURL(service: K.Api.login, method: "GET", variables: variables))
-    }
-    
-    func initWithURL(service: String, method: String, variables: NSMutableDictionary) -> Bool {
-        
-        let urlString = K.Api.baseUrl + service + self.buildVariables(variables: variables) + self.defaultVariables(variables: variables)
-        
-        let url = URL.baseUrlWith(string: urlString)
-        var request = URLRequest(url: url)
-        request.httpMethod = method
-        
-        return true
-        
-    }
-    
-    func defaultVariables(variables: NSMutableDictionary) -> String {
-        variables["member_balance_loan"] = "1"
-        variables["programId"] = "1"
-        variables["member_balance_actual"] = "0"
-        variables["languageId"] = "1"
-        variables["brandId"] = "1"
-        variables["member_balance_available"] = "0"
-        variables["channelId"] = "4"
-        
-        return buildVariables(variables: variables)
-    }
-    
-    func buildVariables(variables: NSMutableDictionary) -> String{
-        
-        var path = ""
 
-        let enumerator = variables.keyEnumerator()
-        while let key = enumerator.nextObject() {
-            
-            if path.characters.count > 0 {
-                path += "&"
-            }
-
-            if let field = variables[key] {
-                path += "\(key)=" + "\(field)"
-            } else {
-                path += "\(key)=" + ""
-            }
-        }
-        
-        return path
     }
     
-    
-    func memberBalance(member: Member, completion: @escaping (Member) -> ()) {
-        let url = URL.baseUrlWith(string: K.Api.balance(username: member.username!, password: self.password))
-        let request = URLRequest.requestGET(url: url)
+    func memberBalance(completion: @escaping (Member) -> ()) {
+        var parameters = NSMutableDictionary()
+        parameters = ["member_account_pwd"   : self.password,
+                      "member_account_login" : self.member.username!]
+        
+        let request = Server.initWithURL(service: K.Api.balance, method: K.RequestMethod.GET, parameters: parameters)
         
         weak var weakSelf = self
         
@@ -157,8 +144,6 @@ class API {
                 return
             }
             
-            let member = Member()
-            
             for user in members {
                 if user["actual_balance"] as? String != nil {
                     weakSelf?.member.balance?.actualPoints = user["actual_balance"] as! String?
@@ -166,7 +151,7 @@ class API {
             }
             
             DispatchQueue.main.async {
-                completion(member)
+                completion((weakSelf?.member)!)
             }
         }
     }

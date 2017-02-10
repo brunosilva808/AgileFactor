@@ -10,6 +10,11 @@ import Foundation
 
 struct K {
     
+    struct RequestMethod {
+        static let GET = "GET"
+        static let POST = "POST"
+    }
+    
     struct Secure {
         static let passwordKey = "KeyForPassword"
         static let passCodeKey = "KeyForPassCode"
@@ -19,6 +24,7 @@ struct K {
     struct Api {
         static let baseUrl = "http://cjaplsrv:8080/ws_rest/"
         static let login = "credentials?"
+        static let balance = "balance?"
         
         static func login(username: String, password: String) -> String {
             return "credentials?member_balance_loan=1&programId=1&member_account_pwd=\(password)&member_account_login=\(username)&member_balance_actual=0&languageId=1&brandId=2&member_balance_available=0&channelId=4"
