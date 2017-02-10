@@ -64,6 +64,6 @@ extension URLRequest {
 
 extension URL {
     static func baseUrlWith(string: String) -> URL {
-        return URL(string: Constants.Api.BaseUrl + string)!
+        return URL(string: K.Api.baseUrl + string)!
     }
 }

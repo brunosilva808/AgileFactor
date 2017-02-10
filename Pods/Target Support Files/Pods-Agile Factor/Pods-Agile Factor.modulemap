@@ -1,0 +1,6 @@
+framework module Pods_Agile_Factor {
+  umbrella header "Pods-Agile Factor-umbrella.h"
+
+  export *
+  module * { export * }
+}

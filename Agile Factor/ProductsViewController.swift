@@ -14,12 +14,12 @@ class ProductsViewController: UICollectionViewController, UICollectionViewDelega
     
     var products: [Product]?
     
-    func fetchProducts() {
-        LibraryAPI.sharedInstance.fetchProductsAlamofire { (products) in
-                self.products = products
-                self.collectionView?.reloadData()
-            }
-    }
+//    func fetchProducts() {
+//        API.sharedInstance.fetchProductsAlamofire { (products) in
+//                self.products = products
+//                self.collectionView?.reloadData()
+//            }
+//    }
     
     // MARK: - Class Cycle
     
@@ -31,7 +31,7 @@ class ProductsViewController: UICollectionViewController, UICollectionViewDelega
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ProductCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        fetchProducts()
+//        fetchProducts()
         
     }
     

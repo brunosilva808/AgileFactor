@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.3.0)
+  - KeychainAccess (3.0.1)
+  - SmileLock (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.3.0)
+  - KeychainAccess (~> 3.0.1)
+  - SmileLock (~> 2.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  SmileLock: ee34bf37e824c8afc71217fccc2b2bee5510db64
+
+PODFILE CHECKSUM: 654c5f9d7a1829d77d7fd1d5d7a2749c271fb46f
+
+COCOAPODS: 1.1.1

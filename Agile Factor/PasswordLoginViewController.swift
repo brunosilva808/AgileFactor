@@ -11,12 +11,20 @@ import SmileLock
 
 class PasswordLoginViewController: UIViewController {
 
+    //MARK: - IBOutlet
+    
     @IBOutlet weak var pinCodeLabel: UILabel!
     @IBOutlet weak var passwordStackView: UIStackView!
     
-    //MARK: Property
+    //MARK: - Var
+    
+    var pinCode = ""
+    var numberOfInputs = 0
+    
     var passwordContainerView: PasswordContainerView!
     let kPasswordDigit = 4
+
+    //MARK: - Class Logic
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +37,14 @@ class PasswordLoginViewController: UIViewController {
         passwordContainerView.highlightedColor = UIColor.blueSystem()
         passwordContainerView.deleteButton.setTitle("Delete".localized, for: .normal)
     }
+    
+    //MARK: - Navigation
+    
+    func presentTabBar() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = TabBarViewController()
+    }
+
     
 }
 
@@ -44,7 +60,15 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
     
     public func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
         if validation(input) {
-            validationSuccess()
+            numberOfInputs += 1
+            
+            if numberOfInputs == 2 {
+                self.validationSuccess()
+                self.presentTabBar()
+            } else {
+                pinCodeLabel.text = "Re Enter Pin Code".localized
+                passwordContainerView.clearInput()
+            }
         } else {
             validationFail()
         }
@@ -54,7 +78,13 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
 
 private extension PasswordLoginViewController {
     func validation(_ input: String) -> Bool {
-        return input == "1234"
+        
+        if pinCode.characters.count == 0 {
+            pinCode = input
+            return true
+        } else {
+            return input == pinCode
+        }
     }
     
     func validationSuccess() {

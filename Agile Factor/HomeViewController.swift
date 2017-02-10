@@ -17,32 +17,24 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginVCID = isBlurUI ? "BlurPasswordLoginViewController" : "PasswordLoginViewController"
+        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Home".localized, aligment: .center)
+        
+//        loginVCID = isBlurUI ? "BlurPasswordLoginViewController" : "PasswordLoginViewController"
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func presentLoginVC(_ sender: AnyObject) {
-        present(loginVCID)
+//        present(loginVCID)
+        present()
     }
     
-    func present(_ id: String) {
+    func present() {
         let loginVC = PasswordLoginViewController()
         present(loginVC, animated: false, completion: nil)
-        
-//        let loginVC = storyboard?.instantiateViewController(withIdentifier: id)
-//        loginVC?.modalTransitionStyle = .crossDissolve
-//        loginVC?.modalPresentationStyle = .overCurrentContext
-//        present(loginVC!, animated: true, completion: nil)
     }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Home".localized, aligment: .center)
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
 
 }

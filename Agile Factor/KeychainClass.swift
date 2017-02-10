@@ -9,7 +9,7 @@
 import Foundation
 import KeychainAccess
 
-class KeychainClass: NSObject {
+class KeychainService: NSObject {
     
     // Class Methods
     

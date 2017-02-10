@@ -10,7 +10,7 @@ import UIKit
 
 class Member: NSObject {
     var guid: Int?
-    var name: String?
+    var username: String?
     var balance: Balance?
 
     override var description: String {
@@ -20,7 +20,7 @@ class Member: NSObject {
         }
         
         return  "id: \(guid)\n" +
-                "name: \(self.name)" +
+                "name: \(self.username)" +
                 "balance: \(self.balance)"
     }
     

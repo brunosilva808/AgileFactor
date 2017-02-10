@@ -76,7 +76,8 @@ class LoginViewController: UIViewController {
         
         ViewHelper.setupStatusBar(statusBarStyle: .lightContent)
         setupUI()
-        animateUI()
+        Swift.debugPrint(self.loginButton.center.y)
+        introUIAnimation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,7 +110,7 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonTouched), for: .touchUpInside)
     }
     
-    internal func animateUI() {
+    internal func introUIAnimation() {
         
         loginButton.center.y -= 390
         loginButton.alpha = 0
@@ -161,29 +162,90 @@ class LoginViewController: UIViewController {
         
     }
     
+    internal func outroUIAnimation() {
+        
+//        loginButton.center.y += 390
+//        loginButton.alpha = 1
+//        usernameTextfield.center.y += 350
+//        usernameTextfield.alpha = 1
+//        passwordTextfield.center.y += 280
+//        passwordTextfield.alpha = 1
+//        loginButton.alpha = 1
+//        signInButton.alpha = 1
+//        forgetPasswordButton.alpha = 1
+//        self.logoImageView.alpha = 1
+        
+        Swift.debugPrint(self.loginButton.center.y)
+        
+        UIView.animate(withDuration: 0.5, delay: 2.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            Swift.debugPrint(self.loginButton.center.y)
+            
+            self.loginButton.center.y += 390
+            self.loginButton.alpha = 1
+        }, completion: nil)
+        
+//        UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 1.0, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+//            self.passwordTextfield.center.y -= 350
+//            self.passwordTextfield.alpha = 0
+//        }, completion: nil)
+//        
+//        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+//            self.usernameTextfield.center.y -= 280
+//            self.usernameTextfield.alpha = 0
+//        }, completion: { bool in
+//            if bool == true {
+//                UIView.animate(withDuration: 0.3, animations: {
+//                    self.logoImageView.alpha = 0
+//                    self.loginButton.alpha = 0
+//                    self.signInButton.alpha = 0
+//                    self.forgetPasswordButton.alpha = 0
+//                })
+//            }
+//        })
+        
+        //        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+        //            self.passwordTextfield.center.y += 350
+        //            self.passwordTextfield.alpha = 1
+        //        }, completion: nil)
+        
+        //        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+        //            self.usernameTextfield.center.y += 280
+        //            self.usernameTextfield.alpha = 1
+        //            self.loginButton.alpha = 1
+        //            self.signInButton.alpha = 1
+        //            self.forgetPasswordButton.alpha = 1
+        //        }, completion: nil)
+        
+    }
+    
+    
     // API
     
     func loginAPI(){
-        LibraryAPI.sharedInstance.login(username: usernameTextfield.text!, password: passwordTextfield.text!, completion: { response in
+        
+        weak var weakSelf = self
+        
+        API.sharedInstance.login(username: usernameTextfield.text!, password: passwordTextfield.text!, completion: { response in
             
             guard response == true else {
                 let alert = UIAlertController.alertView(title: "Login".localized, message: "Credentials invalid!".localized, buttonTitle: "Ok")
-                self.present(alert, animated: true, completion: nil)
+                weakSelf?.present(alert, animated: true, completion: nil)
                 
                 return
             }
             
             DispatchQueue.main.async {
-                self.presentToTabBar()
+                weakSelf?.presentViewController()
             }
         })
     }
     
-    func presentToTabBar() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = TabBarViewController()
+    func presentViewController() {
+        let loginVC = PasswordLoginViewController()
+        present(loginVC, animated: false, completion: nil)
     }
-    
+        
     // MARK: - IBAction
     
     @IBAction func loginButtonTouched(sender: Any) {

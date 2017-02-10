@@ -9,6 +9,20 @@
         <key>comment</key>
         <string>Label for Pin Code action in the PinCode screen</string>
     </dict>
+    <key>Re Enter Pin Code</key>
+    <dict>
+        <key>value</key>
+        <string>Reintroduza Código Pin</string>
+        <key>comment</key>
+        <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
+    <key>Set Pin Code</key>
+    <dict>
+        <key>value</key>
+        <string>Novo Pin Code</string>
+        <key>comment</key>
+        <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
     <key>Delete</key>
     <dict>
         <key>value</key>

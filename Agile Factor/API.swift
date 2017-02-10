@@ -10,21 +10,22 @@ import UIKit
 import Alamofire
 import KeychainAccess
 
-class LibraryAPI {
+class API {
     
     // Var
     
     private let member: Member
-    private let keychain: KeychainClass
+    private var password: String
+    private let keychain: KeychainService
     
     // MARK: - Shared Instance
     
-    static let sharedInstance = LibraryAPI()
+    static let sharedInstance = API()
     
     private init() {
-        // do your init here
         member = Member()
-        keychain = KeychainClass()
+        keychain = KeychainService()
+        password = ""
     }
     
     func validateJSON(response: DataResponse<Any>) -> (success: Bool, dict: [String: Any]) {
@@ -46,7 +47,7 @@ class LibraryAPI {
     // Class Methods
     
     func login(username: String, password: String ,completion: @escaping (Bool) -> ()) {
-        let url = URL.baseUrlWith(string: Constants.Api.login(username: username, password: password))
+        let url = URL.baseUrlWith(string: K.Api.login(username: username, password: password))
         let request = URLRequest.requestGET(url: url)
         
         weak var weakSelf = self
@@ -65,22 +66,80 @@ class LibraryAPI {
             }
 
             for object in array {
-                 weakSelf?.member.guid = object["member_eid"] as? Int
+                weakSelf?.member.guid = object["member_eid"] as? Int
+                weakSelf?.member.username = username
+                weakSelf?.password = password
             }
+            
+            weakSelf?.credentials()
             
             DispatchQueue.main.async {
                 if  weakSelf?.member.guid == nil {
                     completion(false)
                 } else {
-                     weakSelf?.keychain.saveToKeychain(value: password, key: kSecValueRef as String)
+                     weakSelf?.keychain.saveToKeychain(value: password, key: K.Secure.passwordKey)
                     completion(true)
                 }
             }
         }
     }
     
-    func getMemberBalance(member: Member, completion: @escaping (Member) -> ()) {
-        let url = URL.baseUrlWith(string: Constants.Api.balance(username: "leo", password: "password"))
+    func credentials() {
+        var variables = NSMutableDictionary()
+        variables = ["member_account_pwd"   : self.password,
+                     "member_account_login" : self.member.username!]
+        
+        Swift.debugPrint(initWithURL(service: K.Api.login, method: "GET", variables: variables))
+    }
+    
+    func initWithURL(service: String, method: String, variables: NSMutableDictionary) -> Bool {
+        
+        let urlString = K.Api.baseUrl + service + self.buildVariables(variables: variables) + self.defaultVariables(variables: variables)
+        
+        let url = URL.baseUrlWith(string: urlString)
+        var request = URLRequest(url: url)
+        request.httpMethod = method
+        
+        return true
+        
+    }
+    
+    func defaultVariables(variables: NSMutableDictionary) -> String {
+        variables["member_balance_loan"] = "1"
+        variables["programId"] = "1"
+        variables["member_balance_actual"] = "0"
+        variables["languageId"] = "1"
+        variables["brandId"] = "1"
+        variables["member_balance_available"] = "0"
+        variables["channelId"] = "4"
+        
+        return buildVariables(variables: variables)
+    }
+    
+    func buildVariables(variables: NSMutableDictionary) -> String{
+        
+        var path = ""
+
+        let enumerator = variables.keyEnumerator()
+        while let key = enumerator.nextObject() {
+            
+            if path.characters.count > 0 {
+                path += "&"
+            }
+
+            if let field = variables[key] {
+                path += "\(key)=" + "\(field)"
+            } else {
+                path += "\(key)=" + ""
+            }
+        }
+        
+        return path
+    }
+    
+    
+    func memberBalance(member: Member, completion: @escaping (Member) -> ()) {
+        let url = URL.baseUrlWith(string: K.Api.balance(username: member.username!, password: self.password))
         let request = URLRequest.requestGET(url: url)
         
         weak var weakSelf = self
@@ -111,48 +170,5 @@ class LibraryAPI {
             }
         }
     }
-
-    func fetchProductsAlamofire(completion: @escaping ([Product]) -> ()) {
-        let url = URL.baseUrlWith(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        Alamofire.request(request).validate().responseJSON { response in
-            
-            guard response.result.isSuccess else {
-                Swift.debugPrint((response.error?.localizedDescription)!)
-                return
-            }
-            
-            var products = [Product]()
-            
-            guard let value = response.result.value as? [[String: AnyObject]] else {
-                Swift.debugPrint("Malformed data received from fetchAllRooms service")
-                completion(products)
-                return
-            }
-            
-            for dictionary in value {
-                let product = Product()
-                product.title = dictionary["title"] as? String
-                product.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
-                product.points = "1234 points"
-                
-                let partnerDictionary = dictionary["channel"] as! [String: AnyObject]
-                
-                let partner = Partner()
-                partner.name = partnerDictionary["name"] as? String
-                product.partner = partner
-                
-                products.append(product)
-            }
-            
-            DispatchQueue.main.async {
-                completion(products)
-            }
-        }
-    }
-
     
 }

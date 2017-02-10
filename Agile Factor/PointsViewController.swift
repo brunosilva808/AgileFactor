@@ -24,7 +24,7 @@ class PointsViewController: UIViewController {
     }
     
     func getBalanceAPI() {
-        LibraryAPI.sharedInstance.getMemberBalance(member: Member()) { Member in
+        API.sharedInstance.memberBalance(member: Member()) { Member in
             Swift.debugPrint("Balance WebService")
         }
     }
