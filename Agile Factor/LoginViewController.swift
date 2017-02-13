@@ -44,6 +44,30 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
+    let PinTextfield: UITextField = {
+        let textField = UITextField()
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor.blueSystem().cgColor
+        textField.borderStyle = UITextBorderStyle.roundedRect
+        textField.placeholder = "Pin".localized
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        return textField
+    }()
+    
+    let PinRepetitionTextfield: UITextField = {
+        let textField = UITextField()
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor.blueSystem().cgColor
+        textField.borderStyle = UITextBorderStyle.roundedRect
+        textField.placeholder = "Repit Pin".localized
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
+        return textField
+    }()
+    
     let loginButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 5
