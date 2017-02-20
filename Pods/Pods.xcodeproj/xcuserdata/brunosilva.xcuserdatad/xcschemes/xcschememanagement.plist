@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Agile Factor.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>75EA330C432918F6D65371DC56114E5A</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73A3505297F9D70468DC4A613ABC1004</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9793250AFB19DE6B8DECCF3B2FD2B641</key>
+		<key>A2BE55E374267476FB2956EDC31CAF79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD0DFB5E7302C06857F80271F822C405</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE0072A5B9AAACE9B72C606AC944F212</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3FC38F3FDE52425C78ACD4612BC26E3</key>
+		<key>CD064EEDAEE0E5D134642D95E8BAF50A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

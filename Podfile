@@ -10,4 +10,5 @@ target 'Agile Factor' do
 	pod 'SmileLock', '~> 2.0.0'
 	pod 'KeychainAccess’, '~>3.0.1'
 	pod 'Sync', '~> 2.0’
+	pod 'NVActivityIndicatorView', '~> 3.4’
 end

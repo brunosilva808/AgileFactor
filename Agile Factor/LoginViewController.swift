@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     
     // UIComponents
@@ -106,6 +107,10 @@ class LoginViewController: UIViewController {
         return switchTouch
     }()
     
+    
+
+    
+    
     // MARK: - Var
     
     override func viewDidLoad() {
@@ -116,6 +121,8 @@ class LoginViewController: UIViewController {
 //        introUIAnimation()
     }
 
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -265,19 +272,23 @@ class LoginViewController: UIViewController {
         
         weak var weakSelf = self
         
-        API.sharedInstance.login(username: usernameTextfield.text!, password: passwordTextfield.text!, completion: { response in
-            
-            guard response == true else {
-                let alert = UIAlertController.alertView(title: "Login".localized, message: "Credentials invalid!".localized, buttonTitle: "Ok")
-                weakSelf?.present(alert, animated: true, completion: nil)
+        LoadingView.show(view: self.view) { 
+            API.sharedInstance.login(username: usernameTextfield.text!, password: passwordTextfield.text!, completion: { response in
+                LoadingView.hide(view: self.view, completion: {})
                 
-                return
-            }
-            
-            DispatchQueue.main.async {
-                weakSelf?.presentViewController()
-            }
-        })
+                guard response == true else {
+                    let alert = UIAlertController.alertView(title: "Login".localized, message: "Credentials invalid!".localized, buttonTitle: "Ok")
+                    weakSelf?.present(alert, animated: true, completion: nil)
+                    
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    weakSelf?.presentViewController()
+                }
+            })
+        }
+        
     }
     
     // MARK: - UINavigation

@@ -27,6 +27,7 @@
 		7E58A6A11E2CD36F00202AA9 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A01E2CD36F00202AA9 /* Partner.swift */; };
 		7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */; };
 		7E6331101E30C6130026566B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E63310F1E30C6130026566B /* Weather.swift */; };
+		7E79A7EE1E5B1163009B09B7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E79A7ED1E5B1163009B09B7 /* LoadingView.swift */; };
 		7E9554C51E40ACA000E187F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9554C31E40ACA000E187F1 /* SignInViewController.swift */; };
 		7E9554C61E40ACA000E187F1 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9554C41E40ACA000E187F1 /* SignInViewController.xib */; };
 		7E9554CA1E40B62800E187F1 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9554C91E40B62800E187F1 /* Localizator.swift */; };
@@ -78,6 +79,7 @@
 		7E58A6A01E2CD36F00202AA9 /* Partner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
 		7E58A6A31E2D303B00202AA9 /* AgileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgileRouter.swift; sourceTree = "<group>"; };
 		7E63310F1E30C6130026566B /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		7E79A7ED1E5B1163009B09B7 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7E9554C31E40ACA000E187F1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7E9554C41E40ACA000E187F1 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		7E9554C91E40B62800E187F1 /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				7E58A69C1E27E0F600202AA9 /* K.swift */,
 				7E9554D11E40CEE000E187F1 /* CustomImageView.swift */,
 				7E9554C91E40B62800E187F1 /* Localizator.swift */,
+				7E79A7ED1E5B1163009B09B7 /* LoadingView.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				7E9A6A631E27AC82008BA477 /* ProductCell.swift in Sources */,
 				7EB97F091E4C85700083E02E /* KeyChainXPTO.swift in Sources */,
 				7ED78E691E42389F00D14C30 /* MyPasswordUIValidation.swift in Sources */,
+				7E79A7EE1E5B1163009B09B7 /* LoadingView.swift in Sources */,
 				7E16BD291E23D673006CE0A3 /* CatalogViewController.swift in Sources */,
 				7E58A6A41E2D303B00202AA9 /* AgileRouter.swift in Sources */,
 				7E9554D21E40CEE000E187F1 /* CustomImageView.swift in Sources */,

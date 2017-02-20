@@ -123,6 +123,7 @@ class API: Server {
                 if  weakSelf?.member.guid == nil {
                     completion(false)
                 } else {
+                    weakSelf?.keychain.saveToKeychain(value: password, key: K.Secure.passwordKey)
                     weakSelf?.keychain.saveMember(member: (weakSelf?.member)!)
                     completion(true)
                 }

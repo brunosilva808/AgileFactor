@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.3.0)
   - DATAStack (7.0.1)
   - KeychainAccess (3.0.1)
+  - NVActivityIndicatorView (3.4)
   - SmileLock (2.0.0)
   - Sync (2.7.0):
     - DATAStack (~> 7.0.1)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.3.0)
   - KeychainAccess (~> 3.0.1)
+  - NVActivityIndicatorView (~> 3.4)
   - SmileLock (~> 2.0.0)
   - Sync (~> 2.0)
 
@@ -18,10 +20,11 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   DATAStack: 9ca4ba8e8e4f389f1593ad3178d7a4d4df69d648
   KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  NVActivityIndicatorView: 5754be63ceecd1df8af37d3c088d81872feeb8b8
   SmileLock: ee34bf37e824c8afc71217fccc2b2bee5510db64
   Sync: b02ce41aa8080049a2932fd7342fe189edb2298a
   SYNCPropertyMapper: b3157f5183285c8a25ba23877b95a06ec2547e73
 
-PODFILE CHECKSUM: 2910981dabd18b84b695dbd20cf0177bb1ac8247
+PODFILE CHECKSUM: 8b15ef3dd6a9091fcf11ef6b045db889ee94549b
 
 COCOAPODS: 1.1.1
