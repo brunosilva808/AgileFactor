@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import DATAStack
+import CoreData
 
 class TabBarViewController: UITabBarController {
+
+    // MARK: - Class Logic
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +21,11 @@ class TabBarViewController: UITabBarController {
         
         // Implement View Controllers
         let myVC1 = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let myVC2 = PointsViewController(nibName: "PointsViewController", bundle: nil)
-        let layout = UICollectionViewFlowLayout()
-        let myVC3 = CatalogViewController(collectionViewLayout: layout)
-        let myVC4 = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        let myVC2 = BalancesViewController(nibName: "BalancesViewController", bundle: nil)
+//        let layout = UICollectionViewFlowLayout()
+//        let myVC3 = CatalogViewController(collectionViewLayout: layout)
+        let myVC3 = VouchersViewController(nibName: "VouchersViewController", bundle: nil)
+        let myVC4 = SettingsViewController(style: .grouped)
         
         let navController1 = UINavigationController(rootViewController: myVC1)
         let navController2 = UINavigationController(rootViewController: myVC2)
@@ -40,11 +45,11 @@ class TabBarViewController: UITabBarController {
             image: firstImage,
             tag: 1)
         myVC2.tabBarItem = UITabBarItem(
-            title: "Points".localized,
+            title: "Balances".localized,
             image: secondImage,
             tag:2)
         myVC3.tabBarItem = UITabBarItem(
-            title: "Catalog".localized,
+            title: "Vouchers",
             image: secondImage,
             tag:3)
         myVC4.tabBarItem = UITabBarItem(

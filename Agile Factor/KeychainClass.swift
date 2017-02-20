@@ -12,6 +12,27 @@ import KeychainAccess
 class KeychainService: NSObject {
     
     // Class Methods
+
+    func memberExists() -> Bool {
+        if getFromKeychain(key: K.Secure.idKey) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func saveMember(member: Member) {
+        saveToKeychain(value: (member.username)!, key: K.Secure.usernameKey)
+        saveToKeychain(value: String((member.guid)!), key: K.Secure.idKey)
+    }
+    
+    func initMember(member: Member) {
+        member.guid = Int(getFromKeychain(key: K.Secure.idKey)!)
+        
+        if let name = getFromKeychain(key: K.Secure.usernameKey) {
+            member.username = name
+        }
+    }
     
     func saveToKeychain(value: String, key: String) {
         

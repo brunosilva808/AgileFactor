@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DATAStack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KeychainAccess.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,7 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SYNCPropertyMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SmileLock.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Sync.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,7 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3162E1D39D75D4D8C713FF29A98CA476</key>
+		<key>75EA330C432918F6D65371DC56114E5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A08F0BCC44C27C76DF93ED99773EFEDB</key>
+		<key>9793250AFB19DE6B8DECCF3B2FD2B641</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C78830FFF562149B4B693AB9DB8D3DF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE0072A5B9AAACE9B72C606AC944F212</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3FC38F3FDE52425C78ACD4612BC26E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

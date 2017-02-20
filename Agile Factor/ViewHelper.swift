@@ -21,6 +21,13 @@ class ViewHelper {
 //        appDelegate.window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
     }
     
+    static func setTransparentNavigationBar(navigationController: UINavigationController) {
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.view.backgroundColor = UIColor.clear
+    }
+    
     static func setupNavBarTitle(navBar: UINavigationController, navItem: UINavigationItem, view: UIView, title: String, aligment: NSTextAlignment) {
         navBar.navigationBar.isTranslucent = false
         

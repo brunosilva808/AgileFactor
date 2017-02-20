@@ -26,8 +26,6 @@ class ProductsViewController: UICollectionViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Points".localized
-        
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ProductCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         

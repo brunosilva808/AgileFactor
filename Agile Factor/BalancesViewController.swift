@@ -1,5 +1,5 @@
 //
-//  PointsViewController.swift
+//  BalancesViewController.swift
 //  Agile Factor
 //
 //  Created by Bruno Silva on 09/01/2017.
@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import DATAStack
+import CoreData
 
-class PointsViewController: UIViewController {
+class BalancesViewController: UIViewController {
 
+    // MARK: - Class Logic
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Points".localized, aligment: .center)
+        ViewHelper.setupNavBarTitle(navBar: navigationController!, navItem: navigationItem, view: view, title: "Balances".localized, aligment: .center)
         
-        getBalanceAPI()
+        balanceAPI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +27,7 @@ class PointsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getBalanceAPI() {
+    func balanceAPI() {
         API.sharedInstance.memberBalance() { Member in
             Swift.debugPrint("Balance WebService")
         }

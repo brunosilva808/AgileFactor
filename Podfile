@@ -9,4 +9,5 @@ target 'Agile Factor' do
 	pod 'Alamofire', '~> 4.3.0' 
 	pod 'SmileLock', '~> 2.0.0'
 	pod 'KeychainAccess’, '~>3.0.1'
+	pod 'Sync', '~> 2.0’
 end

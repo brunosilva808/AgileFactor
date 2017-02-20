@@ -16,9 +16,10 @@ struct K {
     }
     
     struct Secure {
+        static let usernameKey = "KeyForUsername"
+        static let idKey = "KeyForId"
         static let passwordKey = "KeyForPassword"
         static let passCodeKey = "KeyForPassCode"
-        static let usernameKey = "KeyForUsername"
     }
     
     struct Api {

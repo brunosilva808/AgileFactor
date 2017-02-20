@@ -5,16 +5,23 @@
     <key>Enter Pin Code</key>
     <dict>
         <key>value</key>
-        <string>Introduza o Código Pin</string>
+        <string>Código Pin</string>
         <key>comment</key>
         <string>Label for Pin Code action in the PinCode screen</string>
     </dict>
     <key>Re Enter Pin Code</key>
     <dict>
         <key>value</key>
-        <string>Reintroduza Código Pin</string>
+        <string>Repita o Código Pin</string>
         <key>comment</key>
         <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
+    <key>Sign Up</key>
+    <dict>
+        <key>value</key>
+        <string>Registar</string>
+        <key>comment</key>
+        <string>Title for Sign Up button in Secong Login screen</string>
     </dict>
     <key>Set Pin Code</key>
     <dict>
@@ -22,6 +29,41 @@
         <string>Novo Pin Code</string>
         <key>comment</key>
         <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
+    <key>Repit Pin Code</key>
+    <dict>
+        <key>value</key>
+        <string>Repita Código Pin</string>
+        <key>comment</key>
+        <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
+    <key>Pin Code</key>
+    <dict>
+        <key>value</key>
+        <string>Código Pin</string>
+        <key>comment</key>
+        <string>Label for Pin Code action in the PinCode screen</string>
+    </dict>
+    <key>Pin Codes must be the same</key>
+    <dict>
+        <key>value</key>
+        <string>Códigos Pins têm de ser iguais</string>
+        <key>comment</key>
+        <string>Warning message for Login screen</string>
+    </dict>
+    <key>Please insert username and password</key>
+    <dict>
+        <key>value</key>
+        <string>Por favor insira username e password</string>
+        <key>comment</key>
+        <string>Warning message for Login screen</string>
+    </dict>
+    <key>Pin Codes must have four characters</key>
+    <dict>
+        <key>value</key>
+        <string>Código PIN tem de ter quatro caracteres</string>
+        <key>comment</key>
+        <string>Warning message for Login screen</string>
     </dict>
     <key>Delete</key>
     <dict>
@@ -86,10 +128,10 @@
         <key>comment</key>
         <string>Label for tab bar</string>
     </dict>
-    <key>Points</key>
+    <key>Balances</key>
     <dict>
         <key>value</key>
-        <string>Pontos</string>
+        <string>Saldos</string>
         <key>comment</key>
         <string>Label for tab bar</string>
     </dict>
@@ -106,6 +148,34 @@
         <string>Definições</string>
         <key>comment</key>
         <string>Label for tab bar</string>
+    </dict>
+    <key>Change Password</key>
+    <dict>
+        <key>value</key>
+        <string>Mudar Password</string>
+        <key>comment</key>
+        <string>Change Password option in Settings Screen</string>
+    </dict>
+    <key>Change Pin Code</key>
+    <dict>
+        <key>value</key>
+        <string>Mudar Código Pin</string>
+        <key>comment</key>
+        <string>Change Password option in Settings Screen</string>
+    </dict>
+    <key>Account</key>
+    <dict>
+        <key>value</key>
+        <string>Conta</string>
+        <key>comment</key>
+        <string>Title for Account Screen</string>
+    </dict>
+    <key>Version </key>
+    <dict>
+        <key>value</key>
+        <string>Versão </string>
+        <key>comment</key>
+        <string>App version label in Settings Screen</string>
     </dict>
 </dict>
 </plist>

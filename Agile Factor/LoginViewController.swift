@@ -44,25 +44,26 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
-    let PinTextfield: UITextField = {
+    let pinTextfield: UITextField = {
         let textField = UITextField()
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
         textField.layer.borderColor = UIColor.blueSystem().cgColor
         textField.borderStyle = UITextBorderStyle.roundedRect
-        textField.placeholder = "Pin".localized
+        textField.placeholder = "Pin Code".localized
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
+        textField.isSecureTextEntry = true
         return textField
     }()
     
-    let PinRepetitionTextfield: UITextField = {
+    let pinRepitTextfield: UITextField = {
         let textField = UITextField()
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
         textField.layer.borderColor = UIColor.blueSystem().cgColor
         textField.borderStyle = UITextBorderStyle.roundedRect
-        textField.placeholder = "Repit Pin".localized
+        textField.placeholder = "Repit Pin Code".localized
         textField.autocapitalizationType = .none
         textField.isSecureTextEntry = true
         return textField
@@ -93,15 +94,26 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    // MARK: - Class Cycle
+    let touchIdLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Touch ID"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let switchTouchID: UISwitch = {
+        let switchTouch = UISwitch()
+        return switchTouch
+    }()
+    
+    // MARK: - Var
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ViewHelper.setupStatusBar(statusBarStyle: .lightContent)
         setupUI()
-        Swift.debugPrint(self.loginButton.center.y)
-        introUIAnimation()
+//        introUIAnimation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -115,21 +127,25 @@ class LoginViewController: UIViewController {
         view.addSubview(logoImageView)
         view.addSubview(usernameTextfield)
         view.addSubview(passwordTextfield)
+        view.addSubview(pinTextfield)
+        view.addSubview(pinRepitTextfield)
         view.addSubview(loginButton)
-        view.addSubview(signInButton)
-        view.addSubview(forgetPasswordButton)
+        view.addSubview(touchIdLabel)
+        view.addSubview(switchTouchID)
 
         view.addConstraint(NSLayoutConstraint(item: logoImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
-        
-        view.addConstraintsWithFormat(format: "V:|-70-[v0(160)]-50-[v1(40)]-10-[v2(40)]-20-[v3(40)]-10-[v4(40)]", views: logoImageView, usernameTextfield, passwordTextfield, loginButton, signInButton)
 
+        view.addConstraintsWithFormat(format: "V:|-50-[v0(160)]-30-[v1(40)]-10-[v2(40)]-10-[v3(40)]-10-[v4(40)]-10-[v5(40)]-10-[v6(40)]", views: logoImageView, usernameTextfield, passwordTextfield, pinTextfield, pinRepitTextfield, loginButton, touchIdLabel)
+        view.addConstraintsWithFormat(format: "V:[v0]-10-[v1]", views: loginButton, switchTouchID)
+        
         view.addConstraintsWithFormat(format: "H:[v0(160)]", views: logoImageView)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: usernameTextfield)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: passwordTextfield)
+        view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: pinTextfield)
+        view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: pinRepitTextfield)
         view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: loginButton)
-        view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: signInButton)
-        view.addConstraintsWithFormat(format: "H:|-30-[v0]-30-|", views: forgetPasswordButton)
-        view.addConstraintsWithFormat(format: "V:[v0]-10-|", views: forgetPasswordButton)
+        view.addConstraintsWithFormat(format: "H:|-30-[v0]", views: touchIdLabel)
+        view.addConstraintsWithFormat(format: "H:[v0]-30-|", views: switchTouchID)
         
         loginButton.addTarget(self, action: #selector(loginButtonTouched), for: .touchUpInside)
     }
@@ -243,7 +259,6 @@ class LoginViewController: UIViewController {
         
     }
     
-    
     // API
     
     func loginAPI(){
@@ -265,8 +280,11 @@ class LoginViewController: UIViewController {
         })
     }
     
+    // MARK: - UINavigation
+    
     func presentViewController() {
         let loginVC = PasswordLoginViewController()
+        loginVC.mode = .firstLogin
         present(loginVC, animated: false, completion: nil)
     }
         
@@ -274,6 +292,20 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTouched(sender: Any) {
         guard usernameTextfield.text != "" && passwordTextfield.text != "" else {
+            let alert = UIAlertController.alertView(title: "Login".localized, message: "Please insert username and password".localized, buttonTitle: "Ok")
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        guard pinTextfield.text == pinRepitTextfield.text else {
+            let alert = UIAlertController.alertView(title: "Pin Code".localized, message: "Pin Codes must be the same".localized, buttonTitle: "Ok")
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        guard pinTextfield.text?.characters.count == 4 && pinRepitTextfield.text?.characters.count == 4 else {
+            let alert = UIAlertController.alertView(title: "Pin Code".localized, message: "Pin Codes must have four characters".localized, buttonTitle: "Ok")
+            self.present(alert, animated: true, completion: nil)
             return
         }
         

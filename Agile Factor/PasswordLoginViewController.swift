@@ -9,6 +9,11 @@
 import UIKit
 import SmileLock
 
+enum Login {
+    case firstLogin
+    case secondLogin
+}
+
 class PasswordLoginViewController: UIViewController {
 
     //MARK: - IBOutlet
@@ -23,12 +28,13 @@ class PasswordLoginViewController: UIViewController {
     
     var passwordContainerView: PasswordContainerView!
     let kPasswordDigit = 4
-
+    var mode = Login.secondLogin
+    
     //MARK: - Class Logic
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         pinCodeLabel.text = "Enter Pin Code".localized
         
         //create PasswordContainerView
@@ -42,10 +48,9 @@ class PasswordLoginViewController: UIViewController {
     
     func presentTabBar() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = TabBarViewController()
+        appDelegate.presentTabBarViewController()
     }
 
-    
 }
 
 extension PasswordLoginViewController: PasswordInputCompleteProtocol {
@@ -59,15 +64,27 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
     }
     
     public func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
+        
         if validation(input) {
             numberOfInputs += 1
             
-            if numberOfInputs == 2 {
-                self.validationSuccess()
-                self.presentTabBar()
-            } else {
-                pinCodeLabel.text = "Re Enter Pin Code".localized
-                passwordContainerView.clearInput()
+            switch mode {
+                case .firstLogin:
+                    if numberOfInputs == 2 {
+                        self.validationSuccess()
+                        self.presentTabBar()
+                    } else {
+                        pinCodeLabel.text = "Repit Pin Code".localized
+                        passwordContainerView.clearInput()
+                    }
+                case .secondLogin:
+                    if numberOfInputs == 1 {
+                        self.validationSuccess()
+                        self.presentTabBar()
+                    } else {
+                        pinCodeLabel.text = "Repit Pin Code".localized
+                        passwordContainerView.clearInput()
+                    }
             }
         } else {
             validationFail()

@@ -39,22 +39,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Agile Factor/PasswordLoginViewController.swift"
-            timestampString = "508335756.923141"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "touchAuthenticationComplete(_:success:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/KeychainAccess/Lib/KeychainAccess/Keychain.swift"
             timestampString = "508332296.7031"
             startingColumnNumber = "9223372036854775807"
@@ -120,12 +104,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agile Factor/LoginViewController.swift"
-            timestampString = "508336406.711845"
+            timestampString = "508853146.028262"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "outroUIAnimation()"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "presentViewController()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -135,13 +119,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Agile Factor/LoginViewController.swift"
-            timestampString = "508336407.615885"
+            filePath = "Agile Factor/AppDelegate.swift"
+            timestampString = "508864001.93145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "outroUIAnimation()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -152,13 +136,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agile Factor/API.swift"
-            timestampString = "508417965.830035"
+            timestampString = "509277882.540184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "API"
-            landmarkType = "3">
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "memberBalance(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agile Factor/API.swift"
+            timestampString = "509277881.665156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

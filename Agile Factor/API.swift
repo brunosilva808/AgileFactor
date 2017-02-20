@@ -14,9 +14,9 @@ class API: Server {
     
     // Var
     
-    private let member: Member
+    let member: Member
     private var password: String
-    private let keychain: KeychainService
+    let keychain: KeychainService
     
     // MARK: - Shared Instance
     
@@ -25,7 +25,16 @@ class API: Server {
     private override init() {
         member = Member()
         keychain = KeychainService()
-        password = ""
+        
+        if let pass = keychain.getFromKeychain(key: K.Secure.passwordKey) {
+            password = pass
+        } else {
+            password = ""
+        }
+        
+        if self.keychain.memberExists() == true {
+            keychain.initMember(member: self.member)
+        }
     }
     
     func validateJSON(response: DataResponse<Any>) -> (success: Bool, dict: [String: Any]) {
@@ -114,7 +123,7 @@ class API: Server {
                 if  weakSelf?.member.guid == nil {
                     completion(false)
                 } else {
-                    weakSelf?.keychain.saveToKeychain(value: password, key: K.Secure.passwordKey)
+                    weakSelf?.keychain.saveMember(member: (weakSelf?.member)!)
                     completion(true)
                 }
             }

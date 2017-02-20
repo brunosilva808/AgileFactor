@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Balance" representedClassName="Balance" syncable="YES" codeGenerationType="class">
+        <attribute name="actualPoints" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="memberRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="balanceRelation" inverseEntity="Member" syncable="YES"/>
+    </entity>
+    <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="balanceRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Balance" inverseName="memberRelation" inverseEntity="Balance" syncable="YES"/>
+        <userInfo>
+            <entry key="hyper.isPrimaryKey" value="true"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="Member" positionX="-108" positionY="-72" width="128" height="88"/>
+        <element name="Balance" positionX="135" positionY="-72" width="128" height="73"/>
+    </elements>
+</model>

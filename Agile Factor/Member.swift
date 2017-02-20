@@ -19,8 +19,8 @@ class Member: NSObject {
             return "Member id is null"
         }
         
-        return  "id: \(guid)\n" +
-                "name: \(self.username)" +
+        return  "id: \(guid)" +
+                "name: \(self.username!)" +
                 "balance: \(self.balance)"
     }
     
